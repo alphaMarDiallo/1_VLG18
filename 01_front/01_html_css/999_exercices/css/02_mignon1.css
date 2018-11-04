@@ -1,0 +1,24 @@
+table{
+    border-collapse: collapse;
+}
+
+td{
+    height: 5vh;
+    width: 4vw;
+    
+}
+
+.y{
+    background: yellow;
+}
+.b{
+    background: black;
+}
+.bl{
+    background: blue;
+}
+.g{
+    background: grey;
+}
+
+  

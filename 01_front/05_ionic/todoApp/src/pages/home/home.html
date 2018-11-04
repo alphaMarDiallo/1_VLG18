@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>
+      Tâches
+    </ion-title>
+    <ion-buttons end>
+      <span class="task-nb">
+        {{ tasks.length }}
+      </span>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div padding *ngIf="tasks.length === 0">
+    <h5 text-center>
+      Aucune tâche pour le moment
+    </h5>
+
+  </div>
+  <!--afficher les tâches-->
+  <ion-list>
+    <!--On parcours le tableau des tâches-->
+    <ion-item-sliding *ngFor="let task of tasks">
+      <ion-item>
+        <!--On affiche la liste des tâches-->
+        <ion-label > {{ task.name }} </ion-label>
+        <!--On écoute le status de la tâche-->
+        <ion-checkbox
+          color="grey"
+          [(ngModel)]="task.status"
+          [class.done]="task.status"
+          [checked]="task.status">
+        </ion-checkbox>
+        <ion-note class="todo-note" *ngIf="task.duedate" item-end>
+          <span>Echeance</span><br>
+          {{ task.duedate | moment }}
+        </ion-note>
+      </ion-item>
+      <ion-item-options side="right"
+                        (ionSwipe)="deleteTask(task)">
+        <button expandable
+                ion-button
+                (click)="deleteTask(task)"
+                color="danger">
+          Supprimer
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <!--<pre> {{ task | json}} </pre>-->
+  <!--Ajouter une tâche-->
+  <ion-item *ngIf="active">
+    <ion-input
+      type="text"
+      (ionBlur)="saveTask()"
+      (keypress)="enterSave($event.key)"
+      [(ngModel)]="task.name"
+      placeholder="Ajouter une tâche...">
+    </ion-input>
+    <button class="todo-calendar"
+            ion-button
+            (click)="picker.open()"
+            item-left
+            clear>
+      <ion-icon name="calendar"></ion-icon>
+      <ion-datetime #picker displayFormat="DD/MM/YYYY"
+                    doneText="Confirmer"
+                    cancelText="Annuler"
+                    min="{{ date.toISOString() }}"
+                    max="{{ date.getFullYear() + 10 }}"
+                    [(ngModel)]="task.duedate">
+
+      </ion-datetime>
+    </button>
+  </ion-item>
+</ion-footer>

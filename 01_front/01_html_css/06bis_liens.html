@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liens</title>
+    <link rel="stylesheet" href="css/06bis_liens.css">
+</head>
+<body>
+    <h1>Liens d'une page HTML ou la navigation</h1>
+
+    <h2 id="top">Les ancres : liens dans la même page</h2>
+        <!--( p>a)*8 -->
+       <p><a href="#interieur">Une autre page du même site</a></p>
+       <p><a href="#onglet">Un nouvel onglet</a></p>
+       <p><a href="#site">Un autre site</a></p>
+       <p><a href="#telecharger">Télécharger un fichier</a></p>
+       <p><a href="#visualiser">Ouvrir un PDF dans mon navigateur</a></p>
+       <p><a href="#download">Télécharger un PDF</a></p>
+       <p><a href="#image">Mettre un lien sur une image</a></p>
+       <p><a href="#print">Imprimer la page en cours</a></p>
+
+    <!-- h2#interieur -->
+    <h2 id="interieur">Une autre pade du même site</h2>
+    <a href="06bis_liensPage2.html">Cliquez içi pour aller en page 2</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+    
+    <!-- h2#onglet -->
+    <h2 id="onglet">Un nouvel onglet</h2>
+    <a href="06bis_liensPage2.html" target="_blank">Cliquer içi pour aller en page 2</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h2#site -->
+    <h2 id="site">Un autre site</h2>
+    <a href="http://www.cinemateaser.com/" title=" site cinema">L'attribut TITLE affiche une info-bulle au survol de la souris</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h#telecharger -->
+    <h2 id="telecharger">Télécharger un fichier</h2>
+    <a href="img/document.doc">Télécharger le document</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h2#visualiser -->
+    <h2 id="visualiser">Ouvrir un PDF dans mon navigateur</h2>
+    <a href="img/image.pdf">Visualiser le fichier</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h2#download -->
+    <h2 id="download">Télécharger un PDF</h2>
+    <a href="img/image.pdf" download>l'attribut DOWNLOAD propose de télécharger le fichier</a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h2#image -->
+    <h2 id="image">Mettre un lien sur une image</h2>
+    <a href="https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap"><img src="img/image.jpg" alt="lion"></a>
+    <a href="#top">Remonter</a>
+
+    <hr>
+
+    <!-- h2print -->
+    <h2 id="print">Imprimer la page en cours</h2>
+    <a href="" onClick="window.print()">onClik => je detecte si on a cliqué / window => la page html actuelle / print() => fonction Javascript pour imprimer</a>
+    <a href="#top">Remonter</a>
+    <hr>
+    
+
+</body>
+</html>

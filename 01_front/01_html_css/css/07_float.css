@@ -1,0 +1,31 @@
+p{
+    background-color: aquamarine;
+}
+p span{/*cible les <span> enfant d'une balise <p>*/
+    background-color: #000;
+}
+
+body{
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+div{
+    width: 90%; /*EMET width: 90%; => w90% + tab*/ 
+    background-color: lightblue;
+    margin: 0 auto;
+}
+.photo{
+    height: 11vh; /* vh = viewport height ou hauteur de l'écran*/
+    width:7vw; /* vw = viewport width ou largeur de l'écran*/
+    padding: 5vh; /*marge interieur / EMET => p5vh + tab*/
+    background: url('../img/bkg.jpg');
+    background-repeat: no-repeat; /*l'image ne se répète pas - EMET => brg + tab*/
+    border: 8px double orchide;
+    margin: 2vh;
+    float: left; /*effet flottant plaçant les éléments côte à côte alors que dans le flux naturel du web ilse placent les uns au dessus de autres*/
+}
+/* par convention cette classe est placée à la fin du fichier CSS */
+.clear{
+    clear: both;
+}

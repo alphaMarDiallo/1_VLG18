@@ -1,0 +1,17 @@
+.d1,.d2, .d3, .d4, .d5, .d6, .d7, .d8, .d9, .d10{
+    float: left;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 2px;
+}
+.clear{
+    clear: both;
+}
+.d1, .d3, .d6, .d8{
+    background: purple;
+}
+.d2, .d4, .d5, .d7, .d9, .d10{
+    background: orange;
+}

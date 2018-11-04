@@ -1,0 +1,65 @@
+body{
+    font-size: 25px; /* taille de police en PIXELS*/
+}
+
+h1{
+    background-color: darkblue;
+    color: white;
+}
+
+/* je cible tous les <P> qui sont dans la balise section */
+section p{
+    color: red;
+    }
+    /* le premier <p> */
+    section p:first-child{
+        color:darkcyan;
+    }
+    /* dernier <p> */
+    section p:last-child{
+        color: lightgreen;
+    }
+    /* les <p> pairs */
+    section p:nth-child(even){
+        background: lightskyblue;
+    }
+    /* les <p> impairs */
+    section p:nth-child(odd){
+        color: brown;
+    }
+    /* les <p> 3 et 10 */
+    section p:nth-child(3), section p:nth-child(10){
+        background: coral;
+    }
+
+    /* je cible une classe avec un point " . " */
+    .zone1{
+        color: #dc143c;
+    }
+    .zone2{
+        color: #008080;
+    }
+    .line{
+       color: #00ff00;
+    }
+
+/* je cible unn ID avec "#" */
+#zone3{
+    background-color: #f5deb3; /*EMET pour background-color => bgc+ 
+    tab*/
+    }
+
+    /* ajouter du contenu AVANT */
+    #zone3:before{
+    content:"rajouté AVANT ";
+    }
+    /* ajouter du contenu APRES */
+    #zone3:after{
+        content: " rajouté APRES";
+    }
+
+/* 2ème puce de la liste */
+li:nth-child(2){
+    background-color: darkred;
+    color: #fff;
+}

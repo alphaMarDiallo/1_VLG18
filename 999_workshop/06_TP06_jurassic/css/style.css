@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+}
+/******* DIV.CONTAINER  REGLAGE GENERAL*******/
+.container{
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 396vh;
+    width: 100%;
+    margin: 0 auto;
+}
+.container span{
+    font-weight: bolder;
+}
+
+.btn{
+    background:  #1c5f81;
+    border: 1px solid black;
+    border-left: rgba(0, 0, 0,0);
+    border-right: rgba(0, 0, 0,0);
+    border-bottom: rgba(0, 0, 0,0);
+    color: #fff;
+    text-decoration: none;
+}
+    /**** effet hover des boutons ****/
+  
+.bg-btn:hover, #tickets:hover{
+    background: #fff;
+    border-top: 1px solid black;
+    color: #1C5F81;
+
+}
+    /****fin effet hover des boutons *** */
+    /* ==== bordure verte sur a au clic ==== */
+a:focus, .btn:focus{
+    border-top : 1px solid #8DAE4F;
+}
+    /* ==== fin bordure verte sur a au clic ==== */
+/******* FIN DIV.CONTAINER REGLAGE GENERAL*******/
+/*******HEADER *******/
+header{
+    background: url('../img/dinosaure.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 135vh;
+    width: 100%;
+}
+    /* NAV */
+.menu{
+    background: rgba(0,0,0,0.5);
+    height: 5vh;    
+    width: 100%;
+    position: fixed;
+    z-index: 2;    
+    }
+.menu ul{
+    display: flex;       
+    justify-content: space-evenly;        
+    list-style: none;
+    text-align: center;       
+}
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu .blue{
+    background: #1C5F81;
+}
+.menu ul li a.blue:hover{
+    background:  #fff;
+    border-top: 1px solid #8DAE4F;
+    color: #1C5F81;
+    /* text-decoration: none; */
+}
+.menu ul li:hover{
+    border: 1px solid #fff;
+    border-left: rgba(0, 0, 0,0);
+    border-right: rgba(0, 0, 0,0);
+    border-bottom: rgba(0, 0, 0,0);
+}
+    /* FIN NAV */
+    /* LOGO */
+.jurassic{
+    position: relative;
+    left: 30vw;
+    top: 21vh;
+    z-index: 1;
+}
+.clim{
+    position: relative;
+    left: 80vw;
+    top: 19vh;
+}
+    /* FIN LOGO */
+/******* FIN HEADER****** */
+/* MAIN */
+main{
+    text-align: center;
+}
+h1{
+    line-height: 5vh;
+    font-size: 2.5em;
+}
+/*******SECTION PREZ  *******/
+.prez{
+    height: 50vh;
+    width: 100%;
+}
+.pic{
+    height: 51vh;
+    width: 39vw;
+    text-align: center;
+    position: relative;
+    left: 30vw;
+}
+    /* ====animation sur l'image ==== */
+.pic img:hover{
+    z-index: 2;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px black;
+}
+    /* ==== fin animation sur l'image ==== */
+
+.txt{
+    width: 39vw;
+    position: relative;
+    left: 31vw;
+    top: 2vh;
+    text-align: initial;
+}
+.tag{
+    position: relative;
+    top: 2vh;
+    text-align: center;
+}
+.prez a{
+    background: #1C5F81;
+    color: #fff;
+    height: 4vh;
+    width: 5vw;
+    position: relative;
+    left: 34vh;
+    top: 5vh;
+    text-decoration: none;
+}
+/******* FIN SECTION PREZ  *******/
+/******* SECTION ABOUT *******/
+.about{
+    /* background: blue; */
+    height: 63vh;
+    width: 39.8%;
+    position: relative;
+    top: 65vh;
+    left: 31vw;
+}
+#tarif, #adresse, #horraire, #map{
+    /* border: 1px solid;     */
+    height: 31vh;    
+    width: 49.3%;    
+    float: left;
+}
+#tarif h3, p, #adresse h3, p, #horraire h3, p, #map h3, p{
+   text-align: left;
+   position: relative;
+   left: 1vw;
+}
+#adresse img{
+    position: relative;
+    top: 5px;
+}
+/******* FIN SECTION ABOUT *******/
+/******* SECTION PARTNERS *******/
+.partners{
+    /* background: aquamarine; */
+    height: 19vh;
+    width: 100%;
+    position: relative;
+    top: 74vh;
+}
+.partners ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    position: relative;
+    top: 2vh;
+}
+/******* FIN SECTION PARTNERS *******/
+/******* FOOTER *******/
+.legales{
+    background: black;
+    height: 38vh;
+    width: 100%;
+    position: relative;
+    top: 74vh;
+}
+.mentions, .logo{
+    /* border: 1px solid red; */
+    width: 49%;
+    float: left;
+    height: 37vh    
+}
+.mentions ul{
+    list-style: none;
+    position: relative;
+    left: 27vh;
+    top: 21vh;
+}
+.mentions ul li a{
+    color: white;
+    text-decoration: none;
+}
+.logo img{
+    position: relative;
+    left: 16vw;
+    top: 14vh;
+}
+/******* FIN FOOTER *******/
+.clear{
+    clear: both;
+}
+/******* FIN MAIN *******/

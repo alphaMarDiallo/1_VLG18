@@ -1,0 +1,323 @@
+/* bg body */
+body{
+    background-color: #e7e7e7;
+}
+/* div.container */
+.container{
+    background: #ffffff;
+    height: 96vh;
+    width: 60vw;
+    margin: 0 auto;
+    box-shadow: 1px 6px #b2b1b1, -0.2em 0 .1em #b4b4b4;
+}
+/* header */
+header{
+    /* background: cyan; */
+    display: flex;
+}
+.shop{
+    /* background: pink; */
+    height: 12vh;
+    width: 26vw;
+    }
+    .shop #logo{
+        position: relative;
+        top: 20%;
+        left: 4%;
+    }
+    .shop h1{
+        position: relative;
+        left: 14%;
+        bottom: 37%;
+    }
+    .shop p{
+        position: relative;
+        bottom: 49%;
+        left: 16%;
+        color: #ce648c;
+    }
+.aide{
+    /* background: bisque; */
+    height: 12vh;
+    width: 15vw;
+    }
+    .aide #aideh2{
+        position: relative;
+        top: 8%;
+        left: 12%;
+        color: #40c9fd;
+    }
+    .aide img{
+        position: relative;
+        bottom: 9%;
+    }
+    .aide p{
+        position: relative;
+        bottom: 23%;
+        left: 12%;
+        font-weight: lighter;
+        color: #b4b4b4;
+    }
+.cpte{
+    height: 12vh;
+    width: 20vw;
+    }
+    .cpte #p-cpte{
+        position: relative;
+        left: 37%;
+        color: #ffffff;
+    }
+    .cpte .bg2 #p-art{
+        position: relative;
+        left: 28%;
+        bottom: 67%;
+        color: #ffffff;
+    }
+.bg1, .bg2{
+    background: #40c9fd;
+    }
+    .bg1{
+        height: 2vh;
+        position: relative;
+        bottom: 13%;
+        }
+        .bg1{
+            height: 2vh;
+            position: relative;
+            bottom: 13%;
+        }
+    .bg2{
+        position: relative;
+        bottom: 11%;
+        width: 20vw;
+        height: 7vh;
+        }
+        /* .bg2 img{
+            position: relative;
+            left: 1%;
+            top: 20%;
+        }
+        .bg2 p{
+            position: relative;
+            left: 26%;
+            bottom: 42%;
+        } */
+/* nav */
+nav{
+    background: #40c9fd;
+    height: 4vh;
+    margin: 0;
+    line-height: 229%;
+    }
+    .menu ul{
+        display: flex;
+        margin: 0;
+        justify-content:space-between;
+        padding-left: 0px;
+        list-style: none;
+    }
+    .menu ul li a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+    
+    nav ul li:first-child{
+        background-color: #f48ae3;
+     }
+    #pink{
+        background: #ce648c;
+        width: 7%;
+        padding-left: 46px;
+        padding-right: 19px;
+    }
+/* div.main */
+    /* section.pic */
+.pic{
+    position: relative;
+    right: 10%;
+    }
+    .pic img{
+    width: 100%;
+    }
+    /* section.facture */
+    h3{
+        color: #40c9fd;
+    }
+.facture{
+    /* background: cyan; */
+    height: 16%;
+    display: flex;
+}
+.cb{
+    height: 16vh;
+    width: 13vw;
+    /* background: brown; */
+    }
+    .cb h3, p, img{
+        position: relative;
+        left: 10%;
+    }
+.prez{
+    height: 16vh;
+    width: 35vw;
+    /* background: navy; */
+    }
+    .prez h3{
+        position: relative;
+        left: 2%;
+    }
+    .prez p{
+        position: relative;
+        right: 13%;
+        left: 2%;
+        font-size: 1em;
+        text-align: justify;
+        width: 33vw;
+    }
+.delivery{
+    height: 16vh;
+    width: 13vw;
+    /* background: green; */
+    }
+    .delivery h3{
+        position: relative;
+        left: 36%;
+        top: 1%;
+    }
+    .delivery #camion{
+        position: relative;
+        bottom: 5%;
+        left: 3%;
+    }
+    .delivery #pLiv{
+        position: relative;
+        left: 26%;
+        bottom: 31%;
+    }
+    .delivery #echange{
+        position: relative;
+        bottom: 28%;
+        left: 3%;
+    }
+    .delivery #pPdts{
+        position: relative;
+        left: 26%;
+        bottom: 57%;
+    }
+    /* separateur class fond */
+    .fond{
+        /* background-image: url('../img/fond.png'); */
+        height: 11vh;
+        width: 0.2%;
+        position: relative;
+        /* top: 17%; */
+        }
+        .fond img{
+            height: 24vh;
+            width: 54%;
+            position: relative;
+            top: 21%;
+        }   
+    /* section.art */
+.art{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    }
+    .art h2{
+        background: #cecdcd;
+        text-align: center;
+        position: relative;
+        bottom: 10%;
+        font-size: 1.3rem;
+        border: 1px solid #b4b4b4;
+        border-radius: 22px;
+        box-shadow: 1px 1px #b2b1b1, -0.2em 0 .1em #b4b4b4;
+        /* font-size: 1.4em; */
+    }
+    .art #robe, #talon, #chemise{
+        position: relative;
+    }
+    .art #robe{
+        left: 3%;
+        bottom: 14%;
+    }        
+    .art  #talon{
+        left: 3%;
+        bottom: 14%; 
+    }
+    .art  #chemise{
+        left: 3%;
+        bottom: 14%;
+    }
+    .art p{
+        position: relative;
+        height: 10vh;
+        width: 10vw;
+    }
+.bonPlan{
+    /* background: cyan; */
+    height: 17vh;
+    width: 19vw;
+    border: 1px solid #b4b4b4;
+    border-radius: 10%;
+    box-shadow: 1px 1px #b2b1b1, -0.2em 0 .1em #b4b4b4;
+    }
+    .bonPlan p{
+        position: relative;
+        height: 27vh;
+        width: 14vw;
+        bottom: 96%;
+        left: 24%;
+        text-align: justify;
+    }
+.cCoeur{
+    /* background: purple; */
+    height: 17vh;
+    width: 19vw;
+    border: 1px solid #b4b4b4;
+    border-radius: 10% 10%;
+    box-shadow: 1px 1px #b2b1b1, -0.2em 0 .1em #b4b4b4;
+    }
+    .cCoeur p{
+        position: relative;
+        height: 27vh;
+        width: 14vw;
+        bottom: 74%;
+        left: 26%;
+        text-align: justify;
+    }
+.pLaisir{
+    /* background: pink; */
+    height: 17vh;
+    width: 19vw;
+    border: 1px solid #b4b4b4;
+    border-radius: 10% 10%;
+    box-shadow: 1px 1px #b2b1b1, -0.2em 0 .1em #b4b4b4;
+    }
+    .pLaisir p{
+        position: relative;
+        bottom: 85%;
+        left: 30%;
+        width: 13vw;
+        text-align: justify;
+    }
+/* footer */
+footer{
+    background:#40c9fd;
+    height: 4vh;
+    line-height: 229%;
+    position: relative;
+    /* position: relative; */
+    top: 2.6%;
+    }
+    footer ul{
+        display: flex;
+        margin: 0;
+        justify-content: space-around;
+        list-style: none;
+    }
+    footer ul li a{
+        text-decoration: none;
+        color: white;
+    }

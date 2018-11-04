@@ -1,0 +1,12 @@
+/* corps */
+.container{
+  background-color: #f6f6f6;
+}
+/* bar de progresion  */
+.progress-bar.progress-bar-striped.bg-info{
+  background-color: #2d095c !important;
+}
+/* carousel */
+#carouselExampleIndicators.carousel.slide{
+  width: 50%;
+}

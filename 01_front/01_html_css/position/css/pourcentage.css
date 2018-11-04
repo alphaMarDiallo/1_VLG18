@@ -1,0 +1,15 @@
+.tailleFixe{
+    width: 1000px;
+    height: 200px;
+    background: red;
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
+.tailleVariable{
+    width: 100%;
+    /* par défaut une div se comporte en à 100% */
+    height: 200px;
+    background: blue;;
+    border: 2px solid blue;
+}
+/* % début de responsive, on sadapte à l'écran. */

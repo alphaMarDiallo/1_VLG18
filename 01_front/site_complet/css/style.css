@@ -1,0 +1,1147 @@
+*{
+    box-sizing: border-box;
+}
+/************************ NORMALIZE ************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, acronym, address, 
+big, cite, code, del, dfn, em, img, ins, kbd, 
+q, s, samp, small, strike, strong, sub, sup, 
+tt, var,b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, 
+tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, 
+figcaption, footer, header, hgroup, menu, nav, 
+output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/********************** REGLAGES GENERAUX**********************/
+body{
+    background-image: url(../img/mekong-green.png);
+    scroll-behavior: smooth; /* effet de scroll quand on clique sur une ancre - ne marche que sur Firefox, Chrome et Opera dernieres versions */
+}
+h1{
+    font-size: 45px; /* EMMET => fz45px + tab */
+    font-family: 'Anton', sans-serif;
+    color: #2980b9;
+    text-align: center; /*EMMET => tac + tab */
+    letter-spacing: 1px; /*EMMET => Ls1 +tab */
+}
+h2{
+    font-size: 35px;
+    color: #2c3e50;
+    padding: 20px; /* EMMET => p20 + tab */
+    font-weight: bold; /*EMMET => fwb + tab */
+    text-shadow: 1px 1px 2px #aaa; /* 4 valeurs : ombre horizontale, verticale, zone de flou, couleur de l'ombre*/
+}
+h3{
+    font-size: 22px;
+    color: #2c3e50;
+    padding: 15px;
+    text-shadow: 1px 1px 2px #aaa;
+}
+h4{
+    text-align: center;
+    margin-top: 30px; /* EMMET => mt30 + tab */
+}
+blockquote{
+    font-style: italic;
+    font-size: 120%;
+}
+strong{
+    font-weight: bold; /* EMMET => fwb + tab */
+}
+/*************************** HEADER************************** */
+header{
+    background: #2c3e50;
+    height: 175px; /*EMMET => h175 + tab */
+}
+#logo{
+    float: left; /*EMMET => fl + tab */
+    width: 25%;
+    background: #2c3e50;
+    padding: 15px;
+    text-align: center;
+}
+#slogan{
+    float: left;
+    width: 50%;
+    background: #2c3e50;
+    padding-top: 50px; /*EMMET => pt50 + tab */
+}
+#social{
+    float: left;
+    width: 25%;
+    }
+    #social i{
+        background: #2c3e50;
+        font-size: 30px;
+        text-align: right; /* EMMET => tar + tab */
+        padding: 15px 30px 0 0;
+        display: block; /* EMMET => db + tab */
+    }
+header a{
+    color: #10828c;
+    text-decoration: none; /* EMMET => tdn + tab */
+    
+} 
+/* nav{ 
+    background-color: lightblue;
+    justify-content: space-around;
+    display: flex;
+    height: 50px; 
+}*/
+/*-----------------FIN HEADER--------------- */
+/*----------------DEBUT NAV--------------- */
+nav{
+    background: #2980b9;
+    height: 70px;
+    border-bottom: 8px solid #6acafc;
+    text-align: center;
+    padding: 15px;
+}
+nav a{
+    margin: 10px;
+    padding: 2px 10px;
+    border-radius: 10px 0px;
+    border-bottom-right-radius: 16%;
+    border-top-left-radius: 16%;
+    border: 2px solid #fff;
+    background: #6acafc;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Sunflower', sans-serif;
+    transition: 0.5;
+}
+nav a:hover{
+    background: #a6d6c3;
+    color:#fff;
+}
+.activ{
+    background: #2c3e50;
+    color: #fff;
+}
+/*-----------FIN NAV---------*/
+
+/* ---------ZONING------------ */
+/*FAIRE LE ZONING AVEC DES HAUTEURS ET LARGEURS AVANT DE PLACER LES ELEMENTS DANS LES ZONES POUR ENSUITE SUPPRIMER LES HAUTEURS*/
+main{
+    background: rgba( 178,178,178,0.30);
+    width: 1000px;
+    margin :0 auto;
+}
+aside{
+    height: 250px;
+    background: #a6d6c3;
+}
+section{
+    margin-top :50px;
+    padding :20px;
+}
+footer{
+    background: #2980b9;
+    height: 30px;
+}
+/* --------- FIN ZONING------------ */
+
+/*----------- DEBUT PAGE SELECTEURS ------*/
+
+.select p{
+    color: red;
+}
+.select p:first-of-type{
+    color: pink;
+}
+/* la pseudo class :first-of-type permet de cibler le premier élément dont l'élément parent est d'un type de donné(ex. cibler le premier enfant d'une div) */
+.select p:nth-of-type(5), .select p:nth-of-type(6){
+    color: black;
+}
+.select div:not(.zoneB){
+    font-weight: bold;
+    font-size: 30px;
+}
+.select .zoneA{
+    color: #f56f56;
+}
+.select .zoneB{
+    color: #996633;
+}
+.select .zoneB .couleurBleu{
+    color: blue;
+    font-size: 16PX;
+}
+.select .zoneD{
+    color: #98f32f;
+}
+.select #zoneD span{
+    color: #32ff32;
+    font-size: 30px;
+    font-style: italic;    
+}
+/********************* FIN PAGE STRUCTURE *********************/
+
+/************** DEBUT IMAGE **********************************/
+.imgCss{
+    background-image: url('../img/fond.jpg');
+    height: 67vh;
+    background-repeat: no-repeat;
+    }
+    .imgCss p{
+        height: 16vh;
+        width: 83%;
+        border-radius: 2%;
+        margin: 0 auto;
+        line-height: 156%;
+        position: relative;
+        top: 137px;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding-left: 11px;
+        padding-right: 11px;
+        text-align: justify;
+    }
+
+.imgHtml img{
+    margin-top: 60px;
+    position: relative;
+    left: 35%;
+}
+.imgHtmlCss{
+    height: 600px;
+    }
+.imgHtmlCss h3{
+    margin-bottom: 21px;
+    }
+
+    .imgHtmlCss .bas{
+        position: relative;
+        top: 47%;
+    }
+    .imgHtmlCss .gauche{
+        position: relative;
+        left: 10%;
+    }
+    .imgHtmlCss .droite{
+        position: relative;
+        right: 10%;
+    }
+    .bas, .gauche, .droite{
+        border: 6px solid #fff; 
+        box-shadow: 5px 5px 5px 0px #656565;
+    }
+
+    .gauche, .droite{
+        /* cursor: pointer; */
+        /* transform: rotate(10deg);        */
+        transition-duration: 1s    
+    }
+    .gauche:hover, .droite:hover{
+        /* cursor: pointer; */
+        transform: rotate(20deg);       
+        /* transition-duration: 1s;
+    } */
+    /* .gauche:hover, .droite:hover{
+        cursor: pointer;
+        transform: rotate(20deg);       
+        transition-duration: 1s;*/
+    } 
+    
+    .bas:hover{
+        /* cursor: pointer; */
+        transform: rotate(380deg);    
+        /* transition-duration: 1s; */
+    }
+    .bas{
+        transition-duration: 1s  
+        /* cursor: pointer; */
+        /* transform: rotate(380deg);     */
+        /* transition-duration: 1s; */
+    }
+
+
+/* .gauche, .droite{
+    cursor: pointer;
+    transform: rotate(10deg);       
+    transition: transition 1s;
+   
+   
+}
+.gauche:hover, .droite:hover{
+    cursor: pointer;
+    transform: rotate(10deg);       
+    transition-duration: 0.1s;
+}
+.gauche:hover, .droite:hover{
+    cursor: pointer;
+    transform: rotate(10deg);       
+    transition-duration: 0.1s;
+}
+.bas:hover{
+    cursor: pointer;
+    transform: rotate(380deg);    
+    transition-duration: 1s;
+} */
+
+/*********************** FIN PAGE IMAGE ***********************/
+
+/*********************** BOUTON TOP ***********************/
+button{
+    position:fixed;
+    bottom: 40px;
+    right: 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;    
+    font-size: 250%;
+    color: rgba(151, 216, 178, 0.5);
+}
+/********************** FIN BOUTON TOP **********************/
+/******************* DEBUT  PAGE POSITION  *******************/
+
+
+
+.centre{
+    background: #33cccc;
+    margin: 0 auto;
+    width: 500px;
+    height: 166px;
+}
+.absolute{
+    position: absolute;
+    background: orange;
+    width: 100px;
+    height: 100px;
+    top: 25%;
+    left:10%;
+}
+.relative{
+    background: #0000ff;
+    height: 500px;
+    width: 400px;
+    position: relative;
+    bottom: 10px;
+    left: 100px;
+}
+.relative div{
+    background: yellow;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.trente{
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    background: #3C1B1F;
+    color: #F6E1B5;
+    font-weight: bold;
+}
+.cinquante{
+    width: 50%;
+    padding: 20px;
+    font-size: 22px;
+    background: #6dc9c8;
+    color: #F6E1B5;
+    font-weight: bold;
+}
+.cent{
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+    background: #e40475;
+    color: #F6E1B5;
+    font-weight: bold;
+}
+/***********************  FIN PAGE POSITION ******************/
+/*********************** DEBUT PAGE ZONING ********************/
+
+/* zonig 1 */
+.zone1{
+    border: 1px solid;
+    height: 637px;
+    width: 795px;
+    margin: 0 auto;
+    text-align: center;
+}
+.zone1 .haut{
+    background: yellow;
+    height: 54px;
+}
+
+.zone1 .z-droite{
+    border: 1px solid;
+    height: 582px;
+    width: 212px;
+    float: left;
+    background: #a6d6c3;   
+}
+.zone1 .z-gauche{
+    border: 1px solid;
+    height: 582px;
+    width: 581px;
+    float: left; 
+    background: #10828c;
+}
+/* zone 2 */
+.zone2{
+    border: 1px solid;
+    height: 637px;
+    width: 795px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header{
+    background: #fff;
+    height: 46px;
+}
+.aside1{
+    width: 90px;
+    float: left;
+    height: 588px;
+}
+.middle{
+    background: aqua;
+    width: 613px;
+    float: left;
+    height: 588px;
+}
+.aside2{
+    width: 90px;
+    float: right;
+    height: 588px;
+}
+/* zone 3 */
+.zone3{
+    border: 1px solid;
+    height: 637px;
+    width: 795px;
+    margin: 0 auto;
+    text-align: center;
+}
+.s-gauche{
+    background: #2c3e50;
+    margin-top: 0px; 
+    height: 587px;
+    width: 50%; 
+    float: left  
+}
+.s-droite{
+    background: #656565;
+    margin-top: 0px;
+    height: 587px;
+    width: 50%;
+    float: left
+}
+.footer{
+    background: #3C1B1F;
+    height: 48px;
+}
+/* zone 4 */
+.zone4{
+    border: 1px solid;
+    height: 637px;
+    width: 795px;
+    margin: 0 auto;
+    text-align: center;
+}
+.d-header{
+    background: #fff;
+    height: 94px;
+}
+.d-nav{
+    background: #6dc9c8;
+    height: 46px;
+}
+.d-bleu{
+    background: #2980b9;
+    height: 10px;
+}
+.d-contenu{
+    background: #10828c;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-right-width: 0px;
+    border-right-style: solid;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 417px;
+}
+.d-footer{
+    background: #3C1B1F;
+    height: 48px;
+}
+/* zone 5 */
+.zone5{
+    border: 1px solid;
+    height: 637px;
+    width: 795px;
+    margin: 0 auto;
+    text-align: center;
+}
+.z-header{
+    background: #fce38a;
+    height: 94px;
+}
+.z-nav{
+    background: #d6bc6b;
+    height: 46px;
+}
+.z-bleu{
+    background: #c19718;
+    height: 10px;
+}
+.z-contenu{
+    /* background: #10828c; */
+    margin: 0 auto;
+    margin-top: 10px;
+    border-right-width: 0px;
+    border-right-style: solid;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+    height: 417px;
+}
+.z-1, .z-2, .z-3, .z-4{
+    /* border: 1px solid; */
+    height: 208px;
+    width: 386px;
+    float: left;
+    }
+    .z-1, .z-4{
+        background: #d6bc6b;     
+    }
+    .z-2, .z-3{
+        background: #fce38a;
+    }
+.z-footer{
+    background: #fce38a;
+    height: 48px;
+    }
+    /* zone 6 */
+    .zone6{
+        border: 1px solid;
+        height: 637px;
+        width: 795px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .z6-header{
+        background: #996633;
+        height: 109px;
+        width: 793px;
+        }
+        .h1, .h3{
+            background: #0000ff;
+            height: 109px;
+            width: 151px;
+            float: left;
+        }
+        .h2{
+            background: #2980b9;
+            height: 109px;
+            width: 491px;
+            float: left;
+        }
+    .z6-menu{
+        background: #10828c;
+        height: 30px;
+        width:793px;
+    }
+    .z6-aside{
+        background: yellow;
+        height: 461px;
+        width: 96px;
+        float: left;
+    }
+    .z6-ab{
+        background: bisque;
+        height: 162px;
+        width: 697px;
+        float: left;
+        }
+        .a, .b{
+            height: 162px;
+            width: 348px;
+            float: left;
+        }
+        .a{
+            background: grey;
+        }
+        .b{
+            background: #3C1B1F;
+        }
+    .z6-slide{
+        background: red;
+        height: 142px;
+        width: 697px;
+        float: left;
+    }
+    .z6-grid{
+        background: #656565;
+        height: 157px;
+        width: 697px;
+        float: left;
+        }
+        .c, .d, .e, .f{
+            height: 157px;
+            width: 174px;
+            float: left;
+        }
+        .c{
+            background: #0000ff;
+        }
+        .d{
+            background: grey;
+        }
+        .e{
+            background: #0000ff;
+        }
+        .f{
+            background: grey;
+        }
+    .z6-footer{
+        background: pink;
+        height: 35px;
+        width: 793px;
+    }
+     /* zoning 7 */
+     .zone7{
+        border: 1px solid;
+        height: 637px;
+        width: 795px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .z7-G, .z7-D{
+        background: purple;
+        height: 635px;
+        width: 125px;
+        float: left;    
+    }
+    .z7-middle{
+        background: bisque;
+        height: 635px;
+        width: 543px; 
+        float: left;
+        }
+        .z7-0{
+            background: aquamarine;
+            height: 100px;
+            width: 528px;
+            position: relative;
+            top: 7px;
+            left: 8px;
+        }
+        .z7-1, .z7-2, .z7-3, .z7-4,.z7-5{
+            border: 1px solid black;
+            position: relative;
+            background: purple;
+        } 
+        .z7-1{
+            height: 10vh;
+            width: 10vw;
+           
+        } 
+        .z7-2{
+            width: 10vw;
+            height: 10vh;
+           
+        } 
+        .z7-3{
+            height: 10vh;
+            width: 7vw;
+                        
+           
+        } 
+        .z7-4{
+            height: 10vh;
+            width: 8vw;
+                        
+           
+        } 
+       .z7-5{
+            height: 10vh;
+            width: 19vw;
+                
+       
+        } 
+        .z7-6{
+            background: aquamarine;
+            height: 10vh;
+            width: 19vw;
+                        
+            
+        }
+
+/******************** DEBUT PAGE TABLEAU ********************/
+table{
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+.date{
+    background: #d0e3fa;
+}
+th, tfoot, tbody, tr,td{
+    border: 1px solid #6a5acd;
+}
+th,td, tr{
+    width: 11vw;
+}
+.compagnie td:first-child, .compagnie2 td:first-child{
+    position: relative;
+    top: 2vh;
+}
+/********************* FIN PAGE TABLEAU  *********************/
+
+/********************** DEBUT PAGE LISTE **********************/
+
+    /* debur liste ul */
+.l1{
+    display: flex; 
+    list-style:none;
+}
+.l1 li{
+    margin: 1vw;
+}
+li .fas{
+    font-size: 90ù;
+    color: blue;
+}
+li .fas:hover{
+    font-size: 150%;
+    color: darkred;
+}
+/* fin liste ul */
+/* debut liste imbriquées */
+.li{
+    position: relative;
+    left: 4vw;
+    list-style: disclosure-closed;
+    }
+    .li .liA, .li .liB{
+        position: relative;
+        left: 2vw;
+        list-style: lower-alpha;
+    }
+/* fin liste imbriquées */
+
+/*********************** FIN PAGE LISTE ***********************/
+/***************** DEBUT  PAGE LIENS ET MENU *****************/
+    /* debut liens */
+    .p-liens{
+        display: flex;
+        position: relative;
+        left: 2vw;
+        list-style: none;
+        justify-content: space-evenly;
+    }
+    .p-liens li{
+        background: #2c3e50; 
+        border-radius: 32%;
+        height: 3vh;
+        width: 5vw;
+        text-align: center;
+    }
+    .p-liens li:last-child{
+        width: 8vw;
+    }
+    .p-liens li a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .p-liens li:hover{
+        background: #a6d6c3;
+        color:#fff;
+    }
+    a{
+        text-decoration: none;
+    }
+        /* fin liens */
+        /* debut menu */
+.menu{
+    display: flex;  
+    justify-content: space-evenly;
+    list-style: none;
+    }
+.menu li{
+    background: #2980b9;
+    border-radius: 10px opx;
+    border: 3px solid #fff;
+    padding: 2px 10px;
+    text-align: center;
+    }
+    .menu li:hover{
+        background: #a6d6c3;
+        color:#fff;
+    }
+.menu li a{
+    border-bottom-right-radius: 16%;
+    border-top-left-radius: 16%;
+}
+        /* fin menu */
+        /* debut menu deroulant */
+.md {
+    padding: 0;
+    margin: 0;
+     display: flex;
+    justify-content: space-evenly; 
+    /* float: left; */
+    list-style: none;
+}
+.md li{
+    background: #2980b9;
+    border: 1px solid #fff;
+}
+.md li a{
+   color: #fff;
+   /* padding: 100px; */
+}
+.md li a:hover{
+    background: #a6d6c3;
+}
+.md li .child-list{
+    display: none;
+    list-style: none;
+}
+ .md li:hover .child-list{
+     position: absolute;
+    display: inline-block;
+    /* z-index: 10000; */
+    } 
+    .child-list#nth1{
+        left: 39vw;
+        top: 81vh;
+    }
+    .child-list#nth2{
+        left: 49vw;
+        top: 81vh;
+    }
+    .child-list#nth3{
+        left: 58.2vw;
+        top: 81vh;
+    }
+    .child-list#nth4{
+        left: 66vw;
+        top: 81vh;
+    } 
+.md li:hover .child-list li{
+    display: block;
+}
+        /* fin menu deroulant */
+/* FIN  PAGE LIENS ET MENU */
+/* DEBUT  PAGE FORMULAIRE */
+#form{
+    background: #2c3e50;
+    border-radius: 2%;
+    height: 50vh;
+    width: 37vw;
+    margin: 0 auto;
+    padding: 4%;
+}
+label{
+    color: #fff;
+}
+ input{
+    position: relative;
+    }
+    #pseudo{
+        left: 49%;
+    }
+    #prenom{
+        left: 49.6%;
+    }
+    #mdp{
+        left: 42.2%;
+    }
+    #email{
+        left: 51.2%;
+    }
+    #file{
+        left: 55.6%;
+        color: #fff;
+    }
+    #cp{
+        left: 42.6%;
+    }
+#checkbox{
+    color: #fff;
+}
+textarea{
+    left: 48.6%;
+    position: relative;
+}
+#send, #reset{
+    top: 6vh;
+}
+/******************* FIN  PAGE FORMULAIRE *******************/
+/******************* DEBUT PAGE MULTIMEDIA *******************/
+    /* debut video enfond */   
+    .videoFond{
+    padding-left: 0;
+    padding-right: 0;
+}
+.videoFond video{
+    position: absolute;
+    z-index: 1;/* ordre de superposition des éléments sur l'axe vertical, ne fonction que sur un élément au quel on a appliqué la propriété "position(relative/fixe ou absolute)"*/
+    width: 100%;
+}
+.videoTexte{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.videoFond p{
+    position: absolute;
+    z-index: 2;/*il sera positionné au-dessus de la vidéos*/
+    width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.60);
+    left: 250px;
+    top: 150px;
+    padding: 20px;
+    font-size: 120%;
+    border-radius: 10px;
+}
+    /* fin video en fond */
+    /* debut video youtube */
+iframe[src="https://www.youtube.com/embed/MHYWgf3VqoY"]{
+        width: 100%;
+}
+    /* fin video youtube */
+    /* debut audio map */
+.audio{
+    text-align: center;
+}
+    /* fin audiomap */
+    /* debut googlemap */
+    iframe[src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.238915598064!2d2.2824175160303923!3d48.929891079294464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f57b7711df3%3A0x74333e5944e77045!2sBoulevard+Pierre+de+Coubertin%2C+92230+Gennevilliers!5e0!3m2!1sfr!2sfr!4v1501487598830"]{
+    width: 100%;   
+    }
+    /* fin googlemap */
+/********************** FIN PAGE MULTIMEDIA*******************/
+/******************** DEBUT PAGE ANIMATION ********************/
+    /* debut infobulle */
+.infoBulle{
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    padding-top: 15px;
+    background: #444;
+    box-shadow: 0 0 50px #222 inset; /* inset place l"ombre à l'intérieur*/;
+}
+.infoBulle p{
+    text-align: center;
+    padding-top: 30px;
+}
+.infoBulle a{
+    color: #ccc;
+    text-shadow: 0 -2px 0 black;
+    text-decoration: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+}
+.infoBulle a:hover{
+    text-shadow: 0 1px 2px black;
+    background: rgba(0,0,0,.4);/*.4 = 0.4*/
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    color: #fff;
+}
+.infoBulle a span{
+    position: absolute;
+    padding: 15px;
+    margin-top: 23px;
+    margin-left: -35px;
+    background: rgba(0, 0, 0, .9);
+    opacity: 0;
+    color: #09c;
+    transform: scale(0) rotatez(-12deg); /*rotation sur l'axe vertical https://developper.mozilla.org/fr/docs/web/CSS/transform-function/rotatez  
+    scale() => echelle / taille du zoom*/
+    transition: .25s;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+
+}
+.infoBulle a:hover span{
+    opacity: 1;
+    transform: scale(1) rotatez(0);
+}
+.infoBulle a span:before{/*:before => on injecte qq chose avant*/
+    content:'';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-bottom: 6px solid rgba(0, 0, 0, .9);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+    /* fin infobulle */
+    /* debut effet survol */
+/* 
+Image en gris(grayscale) et floute(blur) */
+.imgEffets{
+    width: 302px;
+    height: 320px;
+    margin: 70px auto;
+}
+.imgEffets li{
+    list-style: none;
+    float: left;
+    width: 141px;
+    height: 150px;
+    margin: 5px;
+}
+.imgEffets img{
+    position: absolute;/*EMMET psa +tab*/
+    z-index: 1;
+    height: 150px;
+    box-shadow: 0 0 3px black;
+    transition: .5s cubic-bezier(0, 3, .4, 1);/*cubic-bézier commence par  0 et se termine par 1 puis entre nous mettons nos valeurs (http://cubic-bezier.com)*/
+}
+.imgEffets li:hover img{/* effet au survol*/
+    z-index: 2;
+    transform: scale(1.5);
+    box-shadow: 0 0 10px black;
+}
+.imgEffets:hover li:not(:hover) img{
+    filter: grayscale(1) blur(5px);
+}
+    /* fin effet survol */
+    /* debut Rotation d'un menu en CSS */
+#menuRotate{
+    height: 360px;
+    width: 576px;
+    margin: 100px auto;
+    background: #627878;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid white;   
+}
+#menuRotate .masque{
+    position: absolute;
+    z-index: 50;
+    width: 585px;
+    height: 135px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#324040, #627878);
+}
+#menuRotate .ombre{
+    position: absolute;
+    z-index: 40;
+    width: 300px;
+    height: 6px;
+    box-shadow: 0px 100px 3px black;
+    border-radius: 75px 75px 75px 75px /3px 3px 3px 3px;/* rayons horizontaux/ verticaux*/ 
+    top: 30px;
+    left: 142px;
+}
+#menuRotate dl{
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    height: 155px;
+    color: #324040; 
+    text-align: center;
+    background: #04b3d2;    
+    border-radius: 4px; 
+    box-shadow: 0 0 6px rgba(0, 0, 0, .7);
+    transform-origin: 50% 120px;
+    animation: bounceOut 0.7s ease-in-out;
+}
+#menuRotate dt{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 28px;
+    padding-top: 5px;
+}
+#menuRotate dd{
+    transform: rotate(180deg);
+}
+#menuRotate dd a{
+    display: block;
+    height: 24px;
+    padding: 3px 0;
+    color: #324040;
+    text-decoration: none;
+}
+#menuRotate dd a:hover{
+    background: rgba(151, 216, 178, 0.1);
+}
+#menuRotate dl:hover{
+    transform: rotate(-180deg);
+    animation: bounceIn 0.7s ease-in-out;
+}
+/* Les keyframes représentent le déroulement de votre animation. Les valeurs en pourcentage représentent un moment temporel précis au cours de la durée de votre animation. Ainsi 10% représentera le 6ème seconde d'une animation durant une minute. Les keyframes 0% et 100% sont obligatoires et que leur omission empêchera le fonctionnement de votre animation sur certain navigateur */
+@keyframes bounceIn{
+    from{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-200deg);
+    }
+    90%{
+        transform: rotate(-175deg);
+    }
+    to{
+        transform: rotate(-180deg);
+    }
+}
+@keyframes bounceOut{
+    from{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(-180deg);
+    }
+    10%{
+        transform: rotate(-180deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+    /* fin Rotation d'un menu en CSS */
+/********************* FIN PAGE ANIMATION *********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clear{
+    clear: both;
+}

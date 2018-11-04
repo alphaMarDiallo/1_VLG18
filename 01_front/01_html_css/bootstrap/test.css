@@ -1,0 +1,25 @@
+.bg-light {
+    background: yellow !important;
+}
+
+li.nav-item {
+    margin-right: 33px;
+}
+
+.one {
+    background: purple;
+}
+
+nav {
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.two li {
+    color: yellow;
+}
+
+a {
+    border: 1px solid pink;
+}
+}

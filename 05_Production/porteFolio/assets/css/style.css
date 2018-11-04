@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+/************************ NORMALIZE ************************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/********************* REGLAGE GENEREAUX *********************/
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.section1 {
+    background: url('../img/bg-prez.jpg');
+}
+
+.section2 {
+    background: url('../img/bg-5.png');
+}
+
+.section3 {
+    background: url('../img/bg-3.jpg');
+}
+
+.section1,
+.section2,
+.section3 {
+    height: 104vh;
+}
+
+/*************************** HEADER ***************************/
+/* NAV */
+.header {
+    /* background-color: rgba(2, 1, 1, 0.781); */
+    background-color: #bf936c;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    border: 1px solid;
+    /* position: fixed; */
+    width: 100vw;
+}
+.nav{
+  
+}
+
+.nav ul li a {
+    color: #fff;
+}
+
+.nav ul li:hover {
+    background-color: #c7b198;
+    -moz-transition-duration: 1s;
+}
+
+.nav ul li:hover a {
+    color: #bf936c;
+}
+
+/*************************** MAIN ***************************/
+/* Section1 */
+.photo {
+    position: relative;
+    left: 20vw;
+    top: 27vh;
+    border-radius: 11px;
+    /* border: 1px solid red; */
+    width: 12vw;
+}
+
+.prez {
+    position: relative;
+    right: 7vw;
+    top: 28vh;
+}
+
+.prez h1 {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.prez h2 {
+    font-size: 2.5em;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.prez p {
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+/* Section2 */
+#competence ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    position: relative;
+    top: 30vh;
+    left: 7vw;
+}
+
+#competence ul li figure img {
+    height: 4vh;
+}
+
+#competence ul li figure:hover {
+    height: 7vh;
+}
+
+#competence ul li #html:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #ff5733;
+;
+}
+#competence ul li #css:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #005792;
+}
+#competence ul li #js:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #facf5a;
+}
+#competence ul li #bootstrap:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #7a5d7e;
+}
+#competence ul li #jq:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #005792;
+}
+#competence ul li #php:hover img {
+    transform: scale(5.1);
+    box-shadow: 0 0 10px black;
+    /* color: #f87d42; */
+    background-color: #2d095c;
+}
+
+figure img {
+    color: rgba(73, 68, 68, 0.5);
+}
+
+figcaption {
+    color: #fff;
+    /* background: rgba(0, 0, 0, 0.5); */
+}
+/*  */
+
+.myForm{
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-top: 85px;
+    padding-right: 80px;
+    padding-left: 80px;
+}

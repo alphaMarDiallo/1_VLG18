@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Choisissez une police Google Fonts et ajoutez-là ici : -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- on ira ajouter dans le CSS ensuite : font-family: 'Nunito', sans-serif; -->
+    <!-- <link rel="stylesheet" href="font-awesome/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <meta name="description" content="site HTML - CSS">
+</head>
+<body>
+    <!-- header>div*4 -->
+    <header>
+        <div id="logo">
+            <!-- a>button>i -->
+            <a href="#logo">
+                <button type="button">
+                    <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+                    <!-- fa. => classe de FontAwesome -->
+                    <!-- aria-... accès de contenus web plus faciles pour les handicapés => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA -->
+                </button>
+            </a>
+            <img src="img/logo.png" alt="logo">
+        </div><!-- ./ #logo -->
+        <div id="slogan"><h1>Site HTML CSS multipages</h1></div>
+        <div id="social">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <!-- i.fab.fa-facebook-square[aria-hidden="true"] -->
+                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </header>
+    <nav>
+        <a href="index.html">Acceuil</a>
+        <a href="texte.html">Texte</a>
+        <a href="selecteur.html">Sélecteur</a>
+        <a href="image.html">Image</a>
+        <a href="position.html">Position</a>
+        <a href="zoning.html" class="activ">Zoning</a>
+        <a href="tableau.html">Tableau</a>
+        <a href="liste.html">Liste</a>
+        <a href="lien_menu.html">Lien & menu</a>
+        <a href="formulaire.html">Formulaire</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="animation.html"  >Animation</a>
+    </nav>
+    <main>
+            <section>
+                <!-- zoning 1 -->
+                <h3>Zone 1</h3>
+                <div class="zone1">
+                    
+                    <div class="haut">
+                            <p>Zone du haut</p>
+                    </div>
+                    <div class="z-droite">
+                        <p>Zone de droite</p>
+                    </div>
+                    <div class="z-gauche">
+                        <p>Zone de gauche</p>
+                    </div>
+                </div>
+                <!-- zoning 2 -->
+                <h3>Zone 2</h3>
+                <div class="zone2">
+                    <header class="header">
+                        <p>Zone du haut</p>
+                        <p>HEADER</p>
+                    </header>
+                    <aside class="aside1">
+                        <p>Zone de gauche</p>
+                        <p>ASIDE</p>
+                    </aside>
+                    <div class="middle">
+                        <p>Zone du mileiu</p>
+                        <p>MIDDLE</p>
+                    </div>
+                    <aside class="aside2">
+                        <p>Zone de droite</p>
+                        <p>ASIDE</p>
+                    </aside>
+                </div>
+                <!-- zoning 3 -->
+                <h3>Zone 3</h3>
+                <div class="zone3">
+                    <section class="s-gauche">
+                        <p>Gauche</p>
+                        <p>SECTION</p>
+                    </section>
+                    <section class="s-droite">
+                        <p>Droite</p>
+                        <p>SECTION</p>
+                    </section>
+                    <div class="clear"></div>
+                    <div class="footer">
+                        <p>Bas</p>
+                        <p>FOOTER</p>
+                    </div>
+                </div>
+                <!-- zoning 4 -->
+                <h3>Zone 4</h3>
+                <div class="zone4">
+                        <div class="d-header">
+                            <p>HEADER</p>
+                        </div>
+                        <div class="d-nav">
+                            <p>NAV</p>
+                        </div>
+                        <div class="d-bleu"></div>
+                        <section class="d-contenu">
+                            <p>SECTION</p>
+                        </section>
+                        <div class="d-footer">
+                            <p>FOOTER</p>
+                        </div>
+                </div>
+                <!-- zoning 5 -->
+                <h3>Zone 5</h3>
+                <div class="zone5">
+                        <div class="z-header">
+                            <p>HEADER</p>
+                        </div>
+                        <div class="z-nav">
+                            <p>NAV</p>
+                        </div>
+                        <div class="z-bleu"></div>
+                        <section class="z-contenu">
+                            <div class="z-1"></div>
+                            <div class="z-2"></div>
+                            <div class="z-3"></div>
+                            <div class="z-4"></div>
+                        </section>
+                        <div class="z-footer">
+                            <p>FOOTER</p>
+                        </div>
+                    </div>
+                    <!-- zoning 6 -->
+                <h3>Zone 6</h3>
+                <div class="zone6">
+                    <div class="z6-header">
+                        <div class="h1">
+                            <p>Haut 1</p>
+                        </div>
+                        <div class="h2">
+                            <p>haut 2</p>
+                        </div>
+                        <div class="h3">
+                            <p>haut 3</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="z6-menu">
+                        <p>MENU</p>
+                    </div>
+                    <div class="z6-aside">
+                        <p>Zone de gauche</p>
+                        <p>ASIDE</p>
+                    </div>
+                    <div class="z6-ab">
+                        <div class="a">
+                            <p>A</p>
+                        </div>
+                        <div class="b">
+                            <p>B</p>
+                        </div>
+                    </div>
+                    <div class="z6-slide"></div>
+                    <div class="z6-grid">
+                        <div class="c">
+                            <p>C</p>
+                        </div>
+                        <div class="d">
+                            <p>D</p>
+                        </div>
+                        <div class="e">
+                            <p>E</p>
+                        </div>
+                        <div class="f">
+                            <p>F</p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="z6-footer">
+                        <p>FOOTER</p>
+                    </div>
+                </div>
+                    <!-- zoning 7 -->
+                <h3>zoning 7</h3>
+                <div class="zone7">
+                  <div class="z7-G">
+                      <p>G</p>
+                  </div>
+                  <div class="z7-middle">
+                      <div class="z7-0">
+                          <p>0</p>
+                      </div>
+                      <div class="z7-1">
+                          <p>1</p>
+                      </div>
+                      <div class="z7-2">
+                          <p>2</p>
+                      </div>
+                      <div class="z7-3">
+                          <p>3</p>
+                      </div>
+                      <div class="z7-4">
+                          <p>4</p>
+                      </div>
+                      <div class="z7-5">
+                          <p>5</p>
+                      </div>
+                      <div class="clear"></div>
+                      <div class="z7-6">
+                          <p>6</p>
+                      </div>
+                  </div>
+                  <div class="z7-D">
+                      <p>D</p>
+                  </div>
+                </div>
+                <div class="clear"></div>
+            </section>
+    </main>
+    <footer>           
+    </footer>
+    </body>
+    </html>

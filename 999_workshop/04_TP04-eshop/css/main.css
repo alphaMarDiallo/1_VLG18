@@ -1,0 +1,101 @@
+/***** HEADER *****/
+/* debut div.assistance */
+.assistance{
+    background: #070707;
+    margin: 0 auto;
+    }
+    .assistance ul{
+        display: flex;
+        list-style: none;
+        line-height: 3vh;
+        margin-bottom: 0px;
+    }
+    .assistance ul li{
+        color: #fff;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+/* fin div.assistance */
+/* debut div.eshop-logo */
+.eshop-logo{
+    margin: 0 auto;
+}
+.eshopLogo img{
+    position: relative;
+    top: 2vh;
+    }
+    .eshopLogo p{
+        color: #6d6a6a;
+        position: relative;
+        left: 1vw;
+        top: 2vh;
+    }
+/* fin div.eshop-logo */
+/* debut div.clients */
+.client{
+    background: #f8f8f8;
+    padding-left: 0px;
+    padding-right: 0px;    
+    padding-top: 1px;   
+}
+.devis, .conseil, .cpte, .panier{
+    /* border: 1px solid; */
+    height: 6vh;
+    width: 50%;    
+    float: left; 
+    padding-left: 0px;
+    padding-right: 0px;   
+}
+.devis img, .conseil img{
+    position: relative;
+    left: 1vw;    
+    top: 1vh;    
+}
+.cpte img, .panier img{
+    position: relative;
+    left: 11vw;    
+    top: 1vh;    
+}
+.panier img{
+    width: 16%;
+}
+.devis span, .conseil span, .cpte span, .panier span{
+    font-weight: bold;
+    position: relative;
+    left: 11%;
+}
+.devis p{
+    position: relative;
+    bottom: 24%;
+    left: 30%;    
+}
+.conseil p{
+    position: relative;
+    bottom: 24%;    
+    left: 30%;
+}
+.cpte p{
+    position: relative;
+    bottom: 24%;    
+    left: 33%;
+}
+.panier p{
+    position: relative;
+    bottom: 24%;    
+    left: 29%;
+}
+.devis p, .conseil p, .cpte p, .panier p{
+    font-style: italic;
+    font-weight: lighter;
+}
+/* fin div.clients */
+/***** FIN HEADER *****/
+/***** DEBUT NAV *****/
+.navbar{
+    box-shadow: 0px -5px 1px -3px rgba(109,106,106, 0.2);
+    margin: 0 auto;
+    }
+    .bg-light{
+        background-color: #f5f5f5 !important;
+    }
+/***** FIN NAV *****/

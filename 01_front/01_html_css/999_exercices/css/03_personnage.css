@@ -1,0 +1,27 @@
+td{
+  border: 1px solid black;
+    height: 3vh;
+    width: 2vw;
+
+}
+.bk{
+    background: black;
+}
+.b1{
+    background: #312519;
+}
+.b2{
+    background: #423223;
+}
+.p1{
+    background: #fdaa7e;
+}
+.p2{
+    background: #fc9c66;
+}
+.cape{
+    background: #3d5928;
+}
+.c{
+    background: #fde5b7;
+}

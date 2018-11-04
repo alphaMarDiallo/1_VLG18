@@ -1,0 +1,68 @@
+body{
+    font-family: sans-serif;
+    font-size: 1.5em;;
+}
+ul{/*sélectionnne toute les balises ul*/
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+
+}
+.left, .right{
+    margin-top: 5em;
+}
+.left ul{
+    margin: 3.2em 0;
+    }
+    .left ul li{
+        border-bottom: 1px solid #cccccc;
+        border-left: 1px solid #cccccc;
+        padding: 1em;
+        width: 10em;
+    }
+    .left ul li:first-child{
+        border-top: 1px solid #cccccc;
+    }
+/* FIN 1ERE COLONNEE */
+
+ul.liste li{
+    border-left: 1px solid #ccc;
+}
+
+.right .change ul li{/* tout les li de la list ul ayant la classe .change elle même enfantde la classe .right*/
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 1em;
+    width: 10em;
+    text-align: center;
+    }
+    .right .change ul li:first-child{
+        background-color: #5d5d5d;
+        color: #fff;
+        font-weight: bold;
+    }
+    .right .change ul li:last-child{
+        border-bottom: 1px solid #ccc;
+    }
+    .right .change ul li#gold{
+        background-color: gold;
+    }
+    .right .change ul li#silver{
+        background-color: silver;
+    }
+/* FIN MISE EN FORME DU TABLEAU */
+
+/* EFFET DE TRANSITION */
+
+.right .change ul:hover{
+    background: linear-gradient(#5d5d5d, #8a8a8a);/*dégradé de haut en bas*/
+    cursor: pointer;/*change l'aspect du curseur*/ 
+    transform: scale(1.4);/* transforme applique un effet de 2d et scale() correspond à l'chelle du zoom ainsi obtenu par rapport à la taille d'origineé*/
+    text-decoration: 2s;
+    }
+    .right .change ul:hover li:first-child{
+        background-color: #000;
+    }
+
+    /* FIN */

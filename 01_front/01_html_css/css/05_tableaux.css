@@ -1,0 +1,43 @@
+*{
+    /* l'étoile sélectionne TOUS les éléments de la page html */
+    font-family: fabtasy;
+}
+
+body{
+    width: 50%; /* Largeur de ma page => 50% de l'écran*/
+    margin: 0 auto; /* je centre mon tableau en utilisant les marges automatique*/
+}
+
+table{
+    border: 4px solid #483d8b;/*bordure = 3 valeurs : epaisseur, type de trait, couleur*/
+    width: 90%;/*Largeur du tableau par rapport à son contenant donc içi le body => règle de l'héritage en CSS*/
+    margin: 25px;
+    border-collapse: collapse;/* par défaut les bordures ont 2 traits => pour qu'il n'y en ait qu'un on utilise la valeur collapse.*/
+
+}
+
+thead, tfoot{
+    background-color: #e6e6fa;
+    border: 2px solid #6a5acd;
+}
+
+tbody{
+    border: 1px solid #6a5acd;
+}
+th{
+    border: 1px dotted #6a5acd;/* dotted => pointillés*/
+    padding: 4px;/* marge intérieur*/
+    background-color: #e6e6fa;
+    width: 25%;
+}
+
+td{
+    font-size: 100%;/*EMET font-size => fz + tab*/
+    border: 1px dotted #6a5acd; /* border => bd + tab*/
+    text-align: center;/*centre le texte / EMET text-align => ta + tab*/
+    }
+    /* texte de la première colonne aligné à gauche - je surcharge ma ligne 36 (text-align: center */
+    td:first-child{
+        text-align: left;
+        background-color: #e6e6fa;
+    }

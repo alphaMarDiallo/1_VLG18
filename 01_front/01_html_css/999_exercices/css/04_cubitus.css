@@ -1,0 +1,22 @@
+.c1, .c2{
+    height: 10em;
+    width: 10em;
+    border: 0.2em solid; /*rappel : border attend 3 valeurs(taille, style et couleur)=> si je n'indique pas de couleur par defaut j'aurai du noir*/
+    margin: 0.2em;
+    float: left;
+    text-align: center;
+    border-radius: 20%;
+}
+
+.c1{
+    background: #1b3c59;
+}
+
+.c2{
+    background: #456173;
+}
+
+.clear{
+    clear: both;
+}
+/* annule l'effet flottant du 'float : left' et du 'float : right' */

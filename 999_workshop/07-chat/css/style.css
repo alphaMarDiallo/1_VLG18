@@ -1,0 +1,39 @@
+/* SECTION */
+.cats{
+    margin: 0 auto;
+    background: #2c2f70;
+    width: 82vw;
+    height: 100vh;
+    }
+    .cats h1{
+        color: white;
+        text-align: center;
+        font-size: 2em;
+    }
+/* RANG*/
+.rang1, .rang2, .rang3{
+    margin: 0 auto;
+    /* border: 1px solid; */
+    height: 25vh;
+    width: 57vw;
+    float: left;
+    margin-left: 13vw;
+    /* margin-top: 110px; */
+}
+#chat01, #chat02, #chat03, #chat04, chat05, #chat06, #chat07, #chat08, #chat09{
+    margin: 3%;
+}
+/* RANG1 */
+/* RANG2 */
+.rang2 #chat05{
+    margin-left: 110px;
+    margin-bottom: 38px;
+}
+/* RANG3 */
+.rang3 #chat08{
+    margin-left: 25%;
+}
+
+.clear{
+    clear: both;
+}

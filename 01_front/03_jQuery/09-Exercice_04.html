@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 4</title>
+</head>
+<body>
+
+    <!-- Intégration de jQuery avec un CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!-- Intégration de notre fichier JS -->
+    <!-- CONSIGNE : Avec l'aide de jQuery, vous devrez :
+
+    1. A l'aide d'une API de Géolocalisation, vous affichez dans la page l'adresse IP ainsi que la Ville et/ou Code Postal de l'internaute.
+
+    Utilisation de JSONP : geoip.nekudo.com ||    
+
+    -->
+
+    <form action="">
+
+
+        <h3>Connexion</h3>
+        <input placeholder="Email" type="text"><br>
+        <input placeholder="Password" type="password">
+
+    </form>
+
+    <script>
+        $(function() {
+
+            // 1. Une requète AJAX SIMPLE
+            $.ajax('http://geoip.nekudo.com/api/')
+            .done(function(data) {
+                console.log(data);
+                console.log(data.ip);
+            });
+
+            // 2. avec getJSON
+            $.getJSON('https://ipapi.co/json', data => {
+                console.log(data)
+
+                $(`
+                    <p>
+                        Votre IP est surveillée : ${data.ip}<br>
+                        ${data.org} - ${data.region}
+                    </p>
+                `).css({background:'yellow', color:'red'}).appendTo('body');
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

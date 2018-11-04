@@ -1,0 +1,35 @@
+body{
+    width: 80%;
+    margin: 10px auto; 
+    /* marge haut et bas - auto => navigateur centre automatiquement le body à l'écran */
+    font-family: cursive;
+}
+
+#contenu{
+    background-color:red;
+    border: 2px solid #000;
+}
+
+header, footer{
+    height: 80px;
+    background-color: #8a3557;
+    color: #fff;
+    text-align: center;
+    padding-top: 6px;
+    /* padding => marge interieur */
+}
+
+nav{
+    height: 40px;
+    background-color: #6a1a2c;
+    color: #fff;
+    padding-left: 20px;/*EMMET pl + tab*/
+    padding-top: 6px;/*EMMET pt + tab*/
+    text-align: center;
+}
+main{
+    border: 20px solid #78774b;
+    background-color: #e6e7af;
+    height: 500px;
+    text-align: center;
+}

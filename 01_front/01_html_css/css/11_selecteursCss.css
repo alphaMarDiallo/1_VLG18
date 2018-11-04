@@ -1,0 +1,108 @@
+*{
+    font-family: sans-serif;
+}
+
+nav{
+    background-color: #000;
+    color: #ffffff;
+    padding: 0 0.5em;
+    text-align: center;
+    width: 100%;    
+    margin: 0;
+    position: fixed;/* nav fixe en haut de la page*/
+    top: 0;
+    left: 0;
+    }
+    nav a{/* tous les liens de la balise NAV*/
+        float: left;
+        text-decoration: none;/*supprime mise en forme par défaut*/
+        color: #ffffff;
+        background-color: #000;
+        height: 2em;/*hauteur*/
+        line-height: 2.7em;/*hauteur de l'interligne pour centrer verticalement le texte*/
+        padding: 0em 2em;/* 2 valeurs => 0 pour haut et bas, 2 => pour droite et gauche*/
+        font-size: 1.2em;/* taille du texte*/
+        transition: 2s; /*temps de l'animation ici, une transition de 2 secondes au survol de la souris sur mes liens de navigation*/
+    }
+    nav a:hover{
+        background: #fda500;
+        color: #000;
+    }
+
+section.container.container4{
+    background-color: rgb(249, 249, 252);
+    border-radius: 3%;
+    border-style: double;
+    height: 239px;
+    width: 516px;
+    position: relative;
+    margin-left: 17vw;
+    margin-top: 10vh;
+    text-align: justify;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);    
+    }    
+    section.container.container4 h3, ul{
+        margin-left: 2vw;
+        line-height: 2.2em;
+    }
+    section.container.container4 ul{
+        text-align: justify;
+        font-weight: bolder;
+    }
+    section.container.container4 ul li {
+        text-decoration: none;
+        list-style: none;
+       
+        word-spacing: 1px;
+        letter-spacing: 1px;
+        line-height: 1.2em;
+    }
+    section.container.container4 ul li a{
+        text-decoration: none;
+        list-style: none;
+        color: #9eaad4;
+        
+       
+    }
+    section.container.container4 ul li a:hover{
+       background-color: #c4ffdd;
+       color: #c40018;
+       
+    }
+
+section#info{
+    background-color: #f0e9fd;
+    position: relative;
+    margin-left: 14%;
+    padding: 40px 10px;
+    width: 70%;
+    margin-top: 36px;
+    }
+    section#info div#d, div#g{
+        background: #f1fcde;
+        border-radius: 2%;
+        position: relative;
+        width: 31vw;    
+        height: 58vh;
+        padding: 4px 15px;
+    }
+    section#info div#d, div#g h2, p{
+        line-height: 1.2em;
+    }
+    section#info p{
+        font-weight: bold;
+    }
+    section#info div#d, div#g  ol{
+        list-style-position: inside;
+    }
+
+div#d{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+div#g{    
+    margin-left: 52%;
+    margin-top: -43%;
+    box-sizing: content-box;
+    height: 5%;
+}

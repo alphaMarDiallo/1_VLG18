@@ -1,0 +1,23 @@
+/* on surcharge le bleu de la classe .primary de BS sur tous les éléments de BS dont on s'est servis */
+nav.navbar.bg-primary, .bg-primary, a.btn-primary, a.nav-link.active{
+    background-color: #d95700 !important;
+    border-color: #d95700;
+}
+a.card-link, a.nav-link{
+    color: #d95700;
+}
+/* on ajoute une couleur de fond sur la page */
+body{
+    background-color: #ededed;
+}
+/* Le jumbotron de Bs */
+.jumbotron{
+    background-color: #fff !important;
+    border-top: 3px solid rbg(219 219 219);
+    /* borduredu haut qui donne un effet d'ombre venant de la nav */
+}
+/* taille carousel */
+#carouselExampleFade.carousel.slide.carousel-fade{
+    width: 600px;
+    height: 699px;
+}

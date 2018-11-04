@@ -1,0 +1,131 @@
+/* div.container */
+.container{
+    background-color: red; 
+    border: 1px solid bloack; 
+    height: 186vh;
+    width: 29vw;
+    margin: 0 auto;
+}
+/* header */
+header{
+    background: aqua;
+    height: 13vh;
+    width: 29vw;
+    text-align: center;
+    }
+    header.titre p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    header.titre h1{
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+    header.titre hr{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 18vw;
+    }
+/* nav */
+nav{
+    background: aliceblue;
+    display: flex;
+    height: 3vh;
+    width: 29vw;
+    }
+    nav.menu ul{
+        display: flex;
+        position: relative;
+        bottom: 3vh;
+        left: 6vw;
+        justify-content: space-between;
+        list-style: none;
+    }
+    nav.menu ul li{
+        padding-right: 8px;
+    }
+    nav.menu ul li a{
+        text-decoration: none;
+    }
+/* div.wrap */
+.wrap{
+    background: aquamarine;
+    height: 161vh;
+    width: 29vw;
+}
+/* sections */
+section .plate, .salle, .dressage, .gout{
+    background: bisque;
+    height: 28vh;
+    width: 29vw;
+}
+/*div des section  */
+.droite, .gauche{
+    border: 1px solid red;
+    border: 1px solid red;
+    height: 32vh;
+    width: 49.5%;
+    float: left;    
+    }
+    .gauche{
+        text-align: left;
+    }
+    .gauche h2{
+        margin-bottom: 0;
+        margin-top: 13px;
+        font-size: 1em;
+        position: relative;
+        left: 1vw;
+    }
+    .gauche p{
+        margin-bottom: 0;
+        margin-top: 13px;
+        font-size: 0.6em;
+        position: relative;
+        left: 1vw;
+        text-align: justify;
+    }
+    .gauche hr{
+        width: 12vw;
+    }
+    .droite{
+        text-align: left;
+    }
+    .droite h2{
+        margin-bottom: 0;
+        margin-top: 13px;
+        font-size: 1em;
+        position: relative;
+        left: 1vw;
+    }
+    .droite p{
+        margin-bottom: 0;
+        margin-top: 13px;
+        font-size: 0.6em;
+        position: relative;
+        left: 1vw;
+        text-align: justify;
+    }
+    .droite hr{
+        width: 12vw;
+    }
+/* img */
+#plate, #salle, #service, #dressage, #gout{
+    width: 100%;
+    height: 99%;
+}
+/* footer */
+footer{
+    text-align: center;
+    }
+    .plan img{
+        width: 18%;
+    }
+    .adresse hr{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 18vw;
+    }
+    .adresse p{
+        font-size: 0.7em;
+    }

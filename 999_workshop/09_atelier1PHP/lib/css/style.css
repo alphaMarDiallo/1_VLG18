@@ -1,0 +1,42 @@
+/* REGLAGES GENERAUX */
+body {
+    background-color: #a9f0d1;
+    font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h5 {
+    font-family: 'Srisakdi';
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    background-image: url("../img/bg.jpg");
+    /* background: red !important; */
+    /* height: 89vh; */
+    position: relative;
+    top: 5vh;
+}
+
+.card {
+    top: 3vh;
+
+}
+
+/* FOOTER */
+footer .row {
+    margin-top: 58px;
+}
+
+.signature {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+/* 
+.col-md-4 {
+    height: 16rem;
+} */

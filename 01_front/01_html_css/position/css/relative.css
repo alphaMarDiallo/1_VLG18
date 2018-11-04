@@ -1,0 +1,14 @@
+p{
+    margin: 0;
+}
+.orange{
+    color: #ff9c00;
+    position: relative;
+    top: 1px;
+    left: 30px;
+}
+#zone{
+    border: 2px solid #336699;
+    margin-left: 100px;
+    margin-right: 100px;
+}

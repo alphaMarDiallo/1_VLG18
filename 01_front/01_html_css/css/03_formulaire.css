@@ -1,0 +1,6 @@
+label{
+    float: left; /*FLOAT => J'aligne un élément içi sur la gauche*/
+    width: 190px; /*Largeur de mon label*/
+    color: #fff; /*couleur de du texte*/
+    background: #cc3d74; /* couleur de fond en code hexadécimal ou RVB*/
+}

@@ -1,0 +1,203 @@
+.conteneur{
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+header{
+
+    background-image: url('../img/woddPlank.jpg');
+}
+h1, #soir{
+    display: inline-block;
+    }
+    u{
+        text-decoration: underline;
+    }
+    h1 #e{
+        color: black;
+        text-decoration: underline;
+    }
+.underline{
+    height: 5px;
+    width: 20px;
+    background:  #e63770;
+    position: relative;
+    bottom: 39px;
+    left: 50px;
+    /* z-index: 10; */
+}
+#underline{
+    height: 5px;
+    width: 20px;
+    background:  #e63770;
+    position: relative;
+    bottom: 16px;
+    left: 31px;
+    /* z-index: 10; */
+}
+.nav_bar ul{
+    position: relative;
+    bottom: 86px;
+}
+.nav_bar ul li{
+    list-style: none ;
+    display: inline-block;
+}
+.nav_bar{
+    word-spacing: 10px;
+    /* float: right; */
+}
+.cerf{
+
+    display: inline-block;
+    image-orientation: flip;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 127px;
+    left: 421px;
+    /* top: -28%; */
+    /* margin-left: 42%;
+    margin-bottom: 0%;
+    margin-top: 85px; */
+    /* right: -64px;  */
+    /* right: 3%;  */
+    }     
+    #triangle{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 150px solid #e63770;
+    border-left : 150px solid transparent;
+    position: relative;
+    left: 41%;
+    bottom: 169px;
+    }
+.fleche{
+    height: 50px;
+    width: 50px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 0%; 
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-bottom: 5px solid #e63770;
+    border-right: 5px solid #e63770;
+    transform: rotate(45deg);
+    margin-left: 49%;   
+    position: relative;
+    bottom: 40px;
+}
+/* 1er section */
+.a{
+    width: 40%;
+    height: 80%;
+    float: left;
+    text-align: center;
+}
+.b img{
+    width: 60%;
+    float: right;
+}
+.c img{
+    width: 55%;
+    float: left;
+    }
+  
+.d{
+    float: right;
+    width: 40%;;
+    }
+    .d img{
+        width: 40%; 
+        height: 60%;
+    }
+.e{
+    width: 50%;
+    text-align: center;
+    float: left;
+    }
+    .e img{
+        width: 25%;
+        height: 25%;
+    }
+.f img{
+    width: 50%;
+    float: right;
+}
+  
+a{
+    text-decoration: none;
+    color: black;
+}
+/* section 4 */
+.eggs img{
+    width: 100%;
+}
+/* FIN section 4 */
+/* span */
+span{
+    color: #e63770; 
+    }
+/* FIN span */
+/* footer */
+#soir{
+    margin: 0;
+}
+.contact .underline{
+    position: relative;
+    bottom: 18 px;
+    left: 35px;
+}
+/* social media */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+p > a:hover{
+    color: fuchsia;
+    text-decoration:  underline;
+}
+ul{
+    list-style: none;
+    margin-left: 76%;
+    padding-bottom: 10%;
+    font-size: 19px;
+    font-family: 'Caveat Brush', cursive;
+}
+li{
+     display: inline;
+}
+.social-icons a {
+    color: fuchsia;
+    text-decoration: none;
+}
+.fa-instagram{
+     padding:10px 14px;
+    transition: .5s;
+}
+.fa-instagram:hover{
+    background-color: #e8584d;
+}
+.fa-facebook {
+    padding:10px 14px;
+    transition: .5s;
+   
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    transition: .5s;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    transition: .5s;
+  }
+.fa-google-plus:hover {
+    background-color: #d11718;
+}
+/* end social media */ 
+/* FIN footer */

@@ -1,0 +1,43 @@
+body h2{
+    margin: 0;
+}
+
+div#wrapper{
+    border: 1px solid black;
+    width:  99vw;
+    height: 99vh;
+    margin: 0;
+}
+
+div#wrapper header{
+    background: red;
+    /* width: 5vw; */
+    height: 10vh;
+}
+
+section#wrap aside.g, aside.d{
+    background: blue;
+    width: 14.7%;
+    height: 89vh; 
+    }
+    section#wrap aside.g{
+        float: left;
+    }
+    section#wrap aside.d{
+        float: right;
+    }
+
+section#wrap .z{
+    background: green;
+    width: 14.1%;
+    height: 80vh;
+    float: left;
+    
+}
+
+footer{
+    float: left;
+    background: yellow;
+    width: 70.6%;
+    height: 9vh;
+}

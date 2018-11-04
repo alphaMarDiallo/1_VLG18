@@ -1,0 +1,28 @@
+page-home {
+  $grey: grey;
+  .done + .item-inner > .input-wrapper{
+    color: $grey;
+    text-decoration: line-through;
+  }
+  .task-nb{
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  ion-footer{
+    box-shadow: 0px 0px 10px #cccccc6e;
+  }
+  .todo-calendar{
+    font-size: 2.2em;
+    color: darken($grey,8%);
+  }
+  .input-cover{
+    position: static;
+  }
+  .todo-note{
+    font-size: 0.9em;
+    span{
+      font-size: 0.8em;
+    }
+  }
+}

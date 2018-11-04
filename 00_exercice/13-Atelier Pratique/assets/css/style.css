@@ -1,0 +1,160 @@
+/********************* REGLAGE GENERAUX *********************/
+body{
+    box-sizing: border-box;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+h2{
+    font-family: "Josefin";
+}
+h3, p{
+    font-family: "Work";
+}
+.navbar .nav-pills .nav-item .nav-link:hover {
+    /* background-color: aliceblue; */
+    color:yellow;
+}
+    /* message de validation */
+
+.alert.alert-success{
+    width: 20vw;
+    height: 10vh;
+    position: relative;
+    left: 40vw;
+    top: 23vh;
+    text-align: center;
+    line-height: 7vh;
+}
+.alert.alert-danger{
+    /* z-index: 2; */
+    position: absolute;
+    top: 12vh;
+    left: 5vw;
+    width: 20vw;
+    height: 10vh;
+    text-align: center;
+    line-height: 7vh;
+}
+
+
+/*************************** HEADER ***************************/
+header{
+    height: 19vh;
+    background-color: #141414 !important;
+}
+    /* nav */
+.navbar.bg-light{
+    background-color: #1e1e1e !important;
+}
+    /* nav list */
+.nav.nav-pills.nav-fill.univers{
+    position: relative;
+    left: 22vw;
+}
+.nav-fill.univers li.nav-item a.nav-link{
+    padding: 0.5rem 2rem;
+    color: #fff !important;
+}
+.nav-fill.univers li.nav-item a.nav-link feImage{
+    line-height: 2vh;
+}
+    /* logo telephone */
+.nav.nav-pills.nav-fill.phone{
+    position: relative;
+    left: 32vw;
+}
+.phone a.nav-link img{
+    height: 9vh;
+    width: 4vw;
+}
+/****************************** MAIN ******************************/
+    /* jumbotron */
+.jumbotron{
+    background-color: #000000;
+    /* background-size: cover; */
+    height: 74vh;
+    margin: 0;
+}
+.jumbotron img{
+    position: relative;
+    top: 8.5vh;
+}
+.jumbotron h2{
+    color: #fff;
+    position: relative;
+    bottom: 63vh;
+    left: 23vw;
+    /* z-index: 1; */
+}
+.jumbotron .lead{
+    position: relative;    
+    bottom: 63vh;    
+    left: 24vw;
+    font-size: xx-large;
+}
+.jumbotron span{
+    position: relative;
+    bottom: 63vh;    
+    left: 21vw;
+    font-size: 1.2em;
+}
+.jumbotron #sBracket{
+    margin-left: 31px;
+}
+
+    /* iPhone7 */
+.iPhone7{
+    background-color: #fff;
+    margin: 0;    
+    height: 50vh;
+}
+#iPhone7 img{
+    position: relative;
+    left: 20vw;
+    top: 15vh;
+} 
+.iPhone7 h3, p, span{
+    position: relative;
+    left: 50vw;
+    bottom: 16vh;
+}
+    /* formulaire */
+.form{
+    background-color: #000000;
+    height: 65vh;
+}
+form{
+    position: relative;
+    left: 32vw;
+    top: 7vh;
+}
+ form .row{
+    margin-bottom: 10px
+ }
+ .email{
+    position: relative;
+    right: 2.1%;
+ }
+ .phone{
+    position: relative;
+    left:  2.1%;
+ }
+ .btn{
+    position: relative;
+    left: 10vw;
+    top: 1vh;
+ }
+
+ /***************************** FOOTER *****************************/
+ footer{
+     background-color: #1e1e1e;
+     height: 11vh;
+    }
+    footer p{
+        color: #fff; 
+        position: relative;
+        left: 46vw;
+        top: 5vh;
+    }

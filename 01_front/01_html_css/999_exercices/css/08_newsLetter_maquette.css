@@ -1,0 +1,43 @@
+table{
+    border: 1px solid black;
+    width: 60vw;
+    height: 82vh;
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tbody{
+    /* text-align: center; */
+}
+
+tfoot{
+    border: 1px solid black;
+}
+
+tr{
+    border: 1px solid black;
+}
+
+th{
+    border: 1px solid black;
+}
+
+td{
+    border: 1px solid black;
+    width: 10vw;
+    }
+    .neuf{
+        height: 25vh;
+    }
+    .right{
+        float: right;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        margin-bottom: -22px;
+        }
+        .right td{
+            width: 5vw;
+        }

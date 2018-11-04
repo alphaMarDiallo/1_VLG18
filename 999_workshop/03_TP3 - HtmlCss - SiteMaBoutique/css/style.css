@@ -1,0 +1,108 @@
+.container{
+    background-color:aquamarine;
+    height: 109vh;
+    width: 52vw;
+    margin: 0 auto;
+}
+/* header */
+header{
+    display: inline-block;
+    }
+    /* div.shop */
+.shop{
+        background-color: bisque;
+        height: 12vh;
+        width: 23vw;
+    }
+    .shop img, h1, p{
+        text-align: center;
+        display: inline-block;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        bottom: 3px;
+        left: 82px;
+        }
+        .shop img{
+            position: relative;
+            left: 5%;
+            bottom: 1px;
+            top: 7px;
+        }
+        /* FIN div.shop */
+        /* div.aide */
+.aide{
+    background-color: pink;
+    height: 12vh;
+    width: 13vw;
+    position: relative;        
+    text-align: center;        
+    left: 444px;        
+    bottom: 115px;
+    }
+    .aide h2, p{
+        display: inline-block;
+        position: relative;
+        }
+    .aide img{
+        position: relative;
+        bottom: 16px;
+        }
+    .aide p{
+        position: relative;
+        bottom: 16px;
+        left: 1px;
+        }        
+        /* FIN div.aide */
+        /*  div.cpte */
+.cpte{
+    background-color: cyan;
+    height: 12vh;
+    width: 16vw;
+    position: relative;
+    left: 696px;
+    bottom: 248px;
+    }
+    .cpte h3{
+        position: relative;
+        left: 89px;
+        top: 16px;
+        }
+    .cpte p{
+        position: relative;
+        left: 10px;
+        bottom: 14px;
+        }
+        /* FIN  div.cpte */
+        /* nav */
+nav{
+    background-color: rgb(56, 139, 248);
+    position: relative;
+    bottom: 265px;
+    }
+    .menu ul{
+        display: flex;
+        justify-content: space-around;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        }
+        .menu ul li{
+            list-style: none; 
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        /* FIN nav */
+        /* div.main */
+.main{
+    position: relative;
+    bottom: 280px;
+}
+.facture{
+    display: inline-block;
+
+}
+    /* section.facture */
+

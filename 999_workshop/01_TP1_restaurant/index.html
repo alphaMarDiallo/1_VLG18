@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TP Restaurant</title>
+
+    <!-- CSS de Bootstrap en 1er -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+      <!-- CSS Bootstrap en local -->
+      <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <!-- CSS perso en 2ème -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noticia+Text|Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Noticia+Text|Old+Standard+TT" rel="stylesheet">  
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col">
+                <div>
+                    <h5 id="sousTitre">city guide - paris</h5>
+                </div>
+                <div class="traitb"></div>
+                <div>
+                    <h1>Le bilan</h1>
+                </div>
+                <div class="traitb"></div>
+                <!-- <div>
+                    <h5>Salle - Service - Dressage - Gôut</h5>
+                </div> -->
+                <nav class="navbar navbar-light bg-light col-md-8">
+                        <a class="navbar-brand" href="#salle">Salle</a>
+                        <a class="navbar-brand" href="#service">Service</a>
+                        <a class="navbar-brand" href="#dressage">Dressage</a>
+                        <a class="navbar-brand" href="#gout">Gôut</a>
+                </nav>
+           </div>      
+       </div>
+       <div class="row" id="plate">
+            <div class="col">
+                    <img src="img/plate2.png" alt="" id="plateb">
+            </div>
+           <div class="col col-md-6 example">
+               <div class="plate">
+                    <h3>Example de plat</h3>
+                    <div class="trait"></div>
+                    <p>MERLU DE LIGNE</p>
+                    <p>CAROTTES NOUVELLES</p>
+                    <p>EPICES DOUCES</p>
+
+               </div>
+              
+           </div>  
+        </div>
+       <div class="row" id="salle">
+           <div class="col col-md-6">
+               <h2>La salle</h2>
+               <div class="trait"></div>
+               <p>Ambiance brute, table en bois ancien, béton ciré au sol. La salle lumineuse est trés agréable, elle est ouverte sur la cuisine. Au fond de la salle, une jolie table ronde à vue sur une rue sur un petit jardin parisien. A l'entrée un joli sol en carreaux de céramique, quelques plumes de paon et de bien jolies bouteilles anciennes...
+                    Le nombre des tables est limité, ce qui rend le restaurant trés appréciable, mais aussi trés prisé !</p>
+           </div>
+           <div class="col col-md-6" id="resto1">
+               <img src="img/resto_01.jpg" alt="">
+           </div>
+       </div>
+       <div class="row" id="service">
+           <div class="col col-md-6" id="resto2">
+               <img src="img/resto_02.jpg" alt="">
+           </div>
+           <div class="col col-md-6">
+               <h2>Le service</h2>
+               <div class="trait"></div>
+               <p>
+                    Service toujours impeccable. L'ensemble de la table est servi rapidement, la corbeille de pain régulièrèment pleine, les serveurs expliquent le menu avec beaucoups d'attention et sont d'excellents conseils pour marier mets-vins.
+                    On reconnaît l'ensemble de l'équipe à leurs tabliers bleu.
+               </p>
+           </div>
+       </div>
+       <div class="row" id="dressage">
+           <div class="col col-md-6">
+               <h2>Le dressage</h2>
+               <div class="trait"></div>
+               <p>
+                    Le dressage c'est un peu la marque de fabrique du chef, avec la cuisine biensûr. Ses plats sont de vrais petits tableaux de maître. Une belle recherche dans les formes et couleurs très agréable visuellement.
+               </p>
+           </div>
+           <div class="col col-md-6" id="resto3">
+               <img src="img/resto_03.jpg" alt="">
+           </div>
+       </div>
+       <div class="row" id="gout">
+           <div class="col col-md-6" id="resto4">
+               <img src="img/resto_04.jpg" alt="">
+           </div>
+           <div class="col col-md-6">
+               <h2>Le goût</h2>
+               <div class="trait"></div>
+               <p>
+                    Last but not least, le goût. C'est le point le plus important, et tellement bien ajusté ici. Les papilles voltent et virevoltent au rythme des saveurs si justes, des cuissons si parfaitement maîtrisé
+                    Chaque plat, chaque association, rien n'est laissé au hasard, de l'élément principal à la toute petite feuille d'herbe délicatement posée sur le dessus du plat. Emerveillement des sens et frénésie de créativité sont au rendez-vous.
+                    
+               </p>
+           </div>
+       </div>
+       <!-- footer -->
+       <div class="row">
+            <div class="col" id="contact">
+                    <div id="plan">
+                        <img src="img/plan.png" alt=""> 
+                        <legend>CITY GUIDE</legend>   
+                    <div class="contact"></div>
+                    </div>
+                    <div class="contact">
+                    <div class="traitb"></div>    
+                        <h2>SEPTIME</h2>
+                    <div class="traitb"></div>     
+                        <p>30 rue de Charonne - 75011</p>
+                        <p>0143673829</p>
+                        <p>
+                         Lundi soir - Mardi à Vendredi midi & soir
+                        </p>
+                    </div>
+               </div>
+       </div>
+   </div>
+
+
+    <!-- AVANT LA FERMETURE DE </BODY> APRES TOUT LE CODE -->
+    <!-- ordre à respecter : 
+    1- jquery
+    2- popper
+    3- bootstrap
+    parce que Bootstrap a besoin des 2 bibliothèque pour fonctionner -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

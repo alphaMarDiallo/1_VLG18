@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revision Js-jQuery, Bootstrap</title>
+
+    <!-- CSS de Bootstrap en 1er -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- CSS perso en 2ème -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <h1>Révisions JS ~ jQuery ~ Bootstrap</h1>
+        <h3>Validation formulaire</h3>
+        <hr>
+
+        <form id="contactForm" class="needs-validation" novalidate>
+            <div id="msg" class="alert" role="alert"></div>
+            <div class="form-group row">
+                <label for="pseudo" class="col-sm-2 col-form-label">Pseudo</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2" for="select">Pays</label>
+                <select class="col-sm-10 form-control" id="select" required>
+                    <option selected>Pays</option>
+                    <option value="1">France</option>
+                    <option value="2">Australie</option>
+                    <option value="3">Japon</option>
+                </select>
+            </div>
+
+            <div class="form-group row">
+                <button type="submit" class="btn btn-outline-info btn-block">Envoyer</button>
+            </div>
+        </form>
+
+        <hr>
+
+<script>
+// appel JQ
+$(function () {
+
+    //Récupération des valeurs de l'internaute :
+    const pseudo = $('#pseudo');
+    const email = $('#email');
+    const pwd = $('#pwd');
+    const select = $('#select');
+    
+    $('#contactForm .alert-danger').remove();
+
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        // Validation des champs "input"
+        if (pseudo.val() === '' || email.val() === '' || pwd.val() === '' || select === 'Pays'){
+            $(this).prepend(`
+            <div class="alert alert-danger">Erreur</div>
+            `)
+        }else{
+            $(this).replaceWith(`
+            <div class="alert alert-success"> Bienvenue </div>
+            `)
+        }
+
+    }); //fin  $('#contactForm').on('submit',function(e)
+    
+</script>
+
+
+
+
+
+
+
+}); //fin $(function()
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+   <!-- JS_JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

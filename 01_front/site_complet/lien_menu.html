@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Choisissez une police Google Fonts et ajoutez-là ici : -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- on ira ajouter dans le CSS ensuite : font-family: 'Nunito', sans-serif; -->
+    <!-- <link rel="stylesheet" href="font-awesome/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+    <meta name="description" content="site HTML - CSS">
+</head>
+<body>
+    <!-- header>div*4 -->
+    <header>
+        <div id="logo">
+            <!-- a>button>i -->
+            <a href="#logo">
+                <button type="button">
+                    <i class="fas fa-arrow-alt-circle-up" aria-hidden="true"></i>
+                    <!-- fa. => classe de FontAwesome -->
+                    <!-- aria-... accès de contenus web plus faciles pour les handicapés => https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA -->
+                </button>
+            </a>
+            <img src="img/logo.png" alt="logo">
+        </div><!-- ./ #logo -->
+
+        <div id="slogan"><h1>Site HTML CSS multipages</h1></div>
+        <div id="social">
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <!-- i.fab.fa-facebook-square[aria-hidden="true"] -->
+                <i class="fab fa-facebook-square" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="clear"></div>
+    </header>
+
+    <nav>
+        <a href="index.html">Acceuil</a>
+        <a href="texte.html">Texte</a>
+        <a href="selecteur.html">Sélecteur</a>
+        <a href="image.html">Image</a>
+        <a href="position.html">Position</a>
+        <a href="zoning.html">Zoning</a>
+        <a href="tableau.html">Tableau</a>
+        <a href="liste.html">Liste</a>
+        <a href="lien_menu.html" class="activ">Lien & menu</a>
+        <a href="formulaire.html">Formulaire</a>
+        <a href="multimedia.html">Multimédia</a>
+        <a href="animation.html"  >Animation</a>
+    </nav>
+    <main>
+        <section>
+                <h3>Liens & menus</h3>
+
+                <ul class="p-liens">
+                    <li><a href="#liens">Les liens</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu déroulant</a></li>
+                </ul>
+        
+                <h3 id="liens">les liens</h3>
+        
+                <p><a href="https://codepen.io/#">CodePen</a> is a social development environment for front-end designers and developers</p>
+                <p><a href="https://www.google.com/"></a>le moteur de recherhce</p>
+                <p><a href="#">Mon CV</a></p>
+                <p><a href="#">Imprimer la page</a></p>
+        
+                <figure>
+                    <img src="img/facebook.ico" alt="logo facebook">
+                    <figcaption>Cliquer <a href="https://fr-fr.facebook.com/">ici</a> pour vous rentre sur la page</figcaption>
+                </figure>
+        
+                <h3>les menus</h3>
+                <ul class="menu">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Parcours </a></li>
+                    <li><a href="#">Réalisations</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <h3>les menus déroulants</h3>
+                <ul class="md">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#">Formation</a>
+                        <ul class="child-list" id="nth1">
+                            <li><a href="#">HTML / CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">PHP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Informations</a>
+                        <ul class="child-list" id="nth2">
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">cours</a>
+                        <ul class="child-list" id="nth3">
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Mon CV</a>
+                        <ul class="child-list" id="nth4">
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                            <li><a href="#">lorem</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+        </section>
+    </main>
+    <footer>           
+    </footer>
+    </body>
+    </html>

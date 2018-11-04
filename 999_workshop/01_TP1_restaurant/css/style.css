@@ -1,0 +1,163 @@
+/* mise en forme & typo*/
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.container{
+    background-color: #ecedef;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+
+    
+    }
+    #plate, #resto1 img, #resto2 img, #resto3 img, #resto4 img{
+        width: 100%;
+    }
+.row{
+    /* border: 1px solid black;
+    margin: 0; */
+    padding: 0 !important;
+    }
+    .row img{
+        padding: 0 auto;
+    }
+    /* navbar */
+.navbar.navbar-light.bg-light.col-md-8{
+    background-color: #ecedef !important;
+    width: 91vw;
+    padding-left: 2rem;
+    margin-left: 14px;
+    margin-right: -12px;
+    padding-right: 0;
+}
+/* FIN navbar*/
+.col{
+    padding: 0;
+    text-align: justify;
+    } 
+    .col h1, h2, h5{
+        text-align: center;
+    }
+    .col h1, h2{
+        font-family: "Noticia Text", sans-serif;
+    }
+    .traitb{
+        width: 17vw;
+        border: 2px solid #bebfc1;
+        margin: 0 auto;
+    }
+    .trait{
+        width: 28vw;
+        border: 2px solid #bebfc1;
+    }
+    .col h5, p{
+        font-family: "Kalam", sans-serif;
+    }
+    .col #sousTitre{
+        color: #928481 !important;
+    }
+
+    div.col.col-md-6 h2{
+        margin-top: 119px
+    }
+    div.col.col-md-6 p{
+        margin-top: 33px;
+        font-size: 1.1em;
+    }
+    div.col.col-md-6 p, img{
+        padding: 0;
+    }
+    #salle p, #dressage p{
+        width: 24vw;
+        margin-left: 42px;
+    }
+    #salle h2, #dressage h2{
+        text-align: left;
+        margin-left: 57px
+    }
+    #salle .trait, #dressage .trait{
+        margin-left: 56px
+    }
+    #service p, #gout p{
+        width: 22vw;
+        margin-left: 74px;
+    }
+    #service h2, #gout h2{
+        text-align: right;
+        margin-right: 34px;
+
+    }
+    #plate h3, p{
+        text-align: right;
+        margin-top: 187px;
+        margin-right: 27px;
+    }
+    #plate p{
+        margin-top: 7px;
+        line-height: 0.1em;
+    } 
+    #plate .trait{
+        margin-bottom: 26px;
+    } 
+    /* footer */
+div.contact{
+    margin-top: 73px;
+    }
+    div.contact p{
+     text-align: center;
+     margin-top: 23px;
+    } 
+    #plan{
+    margin-left: 468px 
+    }
+    #plan legend{
+        margin-top: -80px;
+        margin-left: 30px;
+    }
+    div#contact{
+    margin-top: 115px;
+    margin-left: 26px;
+    }  
+/* FIN footer */
+ /* FIN mise en forme ,et typo */
