@@ -1,0 +1,53 @@
+
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+	<h1 class="mt-4">Vêtements</h1>
+    <div class="row">
+
+        <div class="col-md-3">
+        {% for cat in categories %}
+            <a href="" class="list-group-item">{{cat.categorie|capitalize }}</a>
+        {% endfor %}
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+            {% for produit in produits %}
+               <div class="col-sm-4 mb-4">
+					<div class="card">
+
+						
+						<a href="">
+							<img src="" alt="" class="card-img-top">
+						</a>
+						
+						
+						<div class="card-body"> 
+							<h4>{{produit.titre |capitalize}}</h4>    
+							<h5>{{produit.prix}} €</h5>
+							<p>{{produit.description}}</p>  
+						</div>
+
+					</div>
+				</div>
+                {% endfor %}   
+            </div>
+        </div>
+    </div><!-- .row -->
+
+{% endblock %}
+
+
+{# <h1> {{title}} </h1>
+
+
+{% for produit in produits %}
+<h2> {{ produit.titre}} </h2>
+<ul>
+    <li>Id_produit : {{ produit.id_produit}} </li>
+    <li>Titre : {{ produit.titre}}</li>
+    <li>Prix : {{ produit.prix}} €</li>
+    <li>Stock : {{ produit.stock}}</li>
+</ul>
+{% endfor %} #}
