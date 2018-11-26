@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+
+<h1>Connexion</h1>
+ {% for message in app.session.flashBag.get('success') %}
+        <span class="alert alert-sucess">{{message}}</span><br>
+        {% endfor %}
+
+{% endblock %}

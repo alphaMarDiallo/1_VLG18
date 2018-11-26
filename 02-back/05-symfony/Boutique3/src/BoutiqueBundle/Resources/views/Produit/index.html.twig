@@ -6,9 +6,14 @@
 	<h1 class="mt-4">Vêtements</h1>
     <div class="row">
 
+        {% for message in app.session.flashBag.get('success') %}
+        <span class="alert alert-sucess">{{message}}</span>
+        {% endfor %}
+
         <div class="col-md-3">
+            <a href="{{path('home')}}" class="list-group-item">Tous</a>
         {% for cat in categories %}
-            <a href="" class="list-group-item">{{cat.categorie|capitalize }}</a>
+            <a href="{{path('categorie',{'cat' : cat.categorie} )}}" class="list-group-item">{{cat.categorie|capitalize }}</a>
         {% endfor %}
         </div>
         <div class="col-md-9">
@@ -18,8 +23,8 @@
 					<div class="card">
 
 						
-						<a href="">
-							<img src="" alt="" class="card-img-top">
+						<a href="{{ path('produit', {'id' : produit.idProduit} ) }}">
+							<img src="{{ asset('/photo/' ~ produit.photo) }}" alt="" class="card-img-top">
 						</a>
 						
 						
