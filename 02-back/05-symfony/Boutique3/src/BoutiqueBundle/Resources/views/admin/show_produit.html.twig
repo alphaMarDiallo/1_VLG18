@@ -20,7 +20,12 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
+        <div class="col-6 m-3">
+            <a href="{{path('add_produit')}}">
+                <button class="btn btn-primary">Ajouter produit</button>
+            </a>
+        </div>
+        <div class="col-6">
             <p style="text-align: right;"><strong>Nombre de produit(s) dans la boutique : {{ produits | length }} </strong></p>
         </div>
 
@@ -68,7 +73,10 @@
                         </a>
                     </td>
                     <td>
-                        <a href="">
+                        <a href="{{path('produit_update',
+
+                        {'id' : produit.idProduit})
+                                }}">
                             <i class="text-warning fas fa-edit"></i>
                         </a>
                     </td>

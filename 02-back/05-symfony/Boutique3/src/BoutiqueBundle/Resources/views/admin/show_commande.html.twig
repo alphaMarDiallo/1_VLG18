@@ -31,13 +31,13 @@
                     <td> {{commande.idMembre}} </td>
                     <td> {{commande.montant | number_format(2, ',', '')}} € </td>
                     <td> {{commande.dateEnregistrement | date("d/m/Y - h: i:s")}} </td>
-                     {% if commande.etat == 1 %} 
+                     {# {% if commande.etat == 1 %} 
                      <td class="text-info">En préparation</td>
                      {% elseif  commande.etat == 2 %}
                       <td class="text-warning">En cours de livraison</td>
                      {% else %}
                       <td class="text-success">Livré</td>
-                     {% endif %}
+                     {% endif %} #}
             {% endfor %}
                     <td>
                         {# <a target="_blank" href="{{path('show_commande', {'id' : commande.idCommande})}}"> #}

@@ -104,7 +104,7 @@ class MembreController extends Controller
 
     /**
      * 
-     * @Route("/profil_update", name="profil_update")
+     * @Route("/profil/update", name="profil_update")
      */
     public function updateProfilAction(Request $request){
     $em = $this->getDoctrine()->getManager();

@@ -9,7 +9,7 @@ if (!internauteEstConnecte()) {
 
 //------------- 1 - Préparation des variables d'affichage -------------
 extract($_SESSION['membre']); // extrait tous les indices pour en faire des variables qui recoivent la valeur correspondante
-debugV($_SESSION);
+//debugV($_SESSION);
 
 //----------------------------- I AFFICHAGE -----------------------------
 

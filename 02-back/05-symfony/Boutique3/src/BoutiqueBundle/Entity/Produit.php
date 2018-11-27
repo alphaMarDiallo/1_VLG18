@@ -4,6 +4,8 @@ namespace BoutiqueBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 /**
  * Produit
  *
@@ -75,7 +77,8 @@ class Produit
      *
      * @ORM\Column(name="photo", type="string", length=250, nullable=true)
      */
-    private $photo;
+    private $photo;//nom de la photo stocké en BDD
+    private $file; //On mappe pas $file, car il n'a pas vocation à être enregistrer en BDD. Elle représente la photo(en tant que data)
 
     /**
      * @var float
@@ -342,4 +345,53 @@ class Produit
     {
         return $this->stock;
     }
+
+    //getter & setter de $file
+
+    public function setFile(UploadedFile $file = NULL){
+        $this->file = $file;
+        return $this;
+    }
+    public function getFile(){
+        return $this->file;
+    }
+
+    public function uploadedPhoto(){
+        //Fonction dont l'objectif est d'aller enregistrer notre photo dans le dosseir photo
+
+        //1 : Changer le nom de la photo :
+        $nom_photo = $this->file->getClientOriginalName();
+        $new_nom_photo = $this->renameFile($nom_photo);
+
+        //2 : Définir le chemin de destination
+        $chemin = $this->photoDir();
+
+
+        //3 : Stocker le nom de la photo dans $photo pour que l'info soit enregistré en BDD :
+        $this->photo = $new_nom_photo;
+
+
+        //3 : Déplacer la photo
+        $this->file->move($chemin, $new_nom_photo);
+    }
+    
+    public function renameFile($nom){
+        return 'photo' .time() . '_'.rand(1,999).'_' . $nom;
+        //Transform le nom de la photo de la manière suivante :
+            //ex : tshirt.jpg
+            // devient : photo_15656354_543_tshirt.jpg
+    }
+
+    public function photoDir(){
+        return __DIR__.'/../../../web/photo';
+    }
+
+    public function removePhoto(){
+        $file = $this->photoDir() . '/' . $this->getPhoto();
+        if($file){
+            unlink($file);
+        }
+    }
+
+
 }

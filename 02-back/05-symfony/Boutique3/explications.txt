@@ -779,4 +779,23 @@ lien :
 		php bin/console generate:doctrine:form BoutiqueBundle:Commande
 
 7/ Update un enregistrement très simplement 
+	- voir la route update_produit
+		-> le fonctionnement de Symfony permet de liéer le formulaire à un objet; On dit Hydrater. et de fait lorsque l'on valide un formulaire (persist() puis flush()) cela enregistre les infos en BDD. 
+
 8/ Champs File (pour la photo d'un produit par exemple) 
+	-> Dans le formulaire(ProduitType) on créé un champs file (fileType). On le nomme file et surtout pas photo. car ce n'est la propriété photo de notre objet produit. La propriété photo elle, elle stocke le nom de la photo pour l'enregistrement en BDD. 
+
+	-> On modifie notre entité Produit 
+		- Ajout d'une propriété file (liée au champs file du formulaire) qui manipulera la data. 
+		- Cette propriété est en fait un objet UploadedFile, prêt à être charger sur le serveur. 
+
+	-> On créé les fonctions suivantes : 
+		-UploadedPhoto() 
+		-photoDir() 
+		-renamePhoto() 
+		-removePhoto() 
+			=> Ces fonctions on chacune leur rôle et manipule le nom, le chemin, l'enregistrement et la suppression de la photo 
+
+	-> On ajouote à nos fonction du controller (update_produit et add_produit) la fonction uploadedPhoto() et removePhoto() avant flush() les infos du formulaire. 
+
+	/!\ En utilisant Symfony de manière plus avancée, on pourrait utiliser les évènements pour rendre certaines choses plus automatiques comme par exemple supprimer tout seul une photo lorsque'une nouvelle est chargée.

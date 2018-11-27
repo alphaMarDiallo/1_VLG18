@@ -5,9 +5,16 @@ namespace BoutiqueBundle\Controller;
 use BoutiqueBundle\Entity\Commande;
 use BoutiqueBundle\Entity\Membre;
 use BoutiqueBundle\Entity\Produit;
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+use BoutiqueBundle\Form\ProduitType;
+use BoutiqueBundle\Form\MembreType;
+use BoutiqueBundle\Form\CommandeType;
 
 class AdminController extends Controller
 {
@@ -115,5 +122,104 @@ class AdminController extends Controller
     }
 
 //-----------------------------------------------------------------
+    /**
+     *@Route("/admin/produit/add/", name="add_produit")
+     *
+     */
+    public function addProduitAction(Request $request)
+    {
+		
+		// On créé un objet $produit qui sera hydraté par le formulaire : 
+        $produit = new Produit; 
+		
+		// On créé le formulaire : 
+        $form = $this->createForm(ProduitType::class, $produit);
+		
+		// Traitements des infos du formulaire : 
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($produit);
+            $produit->uploadedPhoto();//Cette fonction va enregistrer le fichier photo, après l'avoir renommer et va également enregistrer dans la propriété photo, le nom de la photo (pour la BDD)
+
+            $em->flush();
+            $request->getSession()->getFlashBag()->add('success', 'Le produit <b>' . $produit->getTitre() . '</b> a été ajouté avec succès !');
+
+            return $this->redirectToRoute('show_produit');
+
+        }
+
+        $params = array(
+            'title' => 'Ajouter un produit',
+            'produitForm' => $form->createView()
+        );
+
+        return $this->render('@Boutique/Admin/form_produit.html.twig', $params);
+    }
+
+    /**
+     
+     * @Route("/admin/produit/update/{id}", name="produit_update")
+     */
+    public function updateProduitAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $produit = $em->find(Produit::class, $id);
+
+        $form = $this->createForm(ProduitType::class, $produit);
+    //Je récupère un formulaire de la classe ProduitType et je le lie à mon objet membre
+
+        $form->handleRequest($request);
+    // A partir de maintenant notre oibjet $membre contient les infos saisies dans le formulaire
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->persist($produit);
+
+            if($produit->getFile() != NULL){
+                //Avant de traiter la photo du formulaire on vérifie qu'il y en ait une. sinon l'ancienne sera sauvegardé
+                $produit->removePhoto();
+                $produit->uploadedPhoto();
+            }
+
+            $em->flush();
+
+            $request->getSession()->getFlashBag()->add(
+                'success',
+                'les informations du produit  '.$produit->getTitre().'  a été mises à jour.'
+            );
+
+            return $this->redirectToRoute('show_produit');
+        }
+
+        $params = array(
+            'title' => 'Modification de produit ' .$produit->getIdProduit(),
+            'produitForm' => $form->createView()
+        );
+
+        return $this->render("@Boutique/admin/form_produit.html.twig", $params);
+    }
+
+    /**
+     * 
+     * @Route("/admin/membre/{id}" name="profil_client")
+     */
+
+    public function profilClientAction($id){
+
+        $repo_membre = $this->getDoctrine()->getRepository(Membre::class);
+        $membres = $repo_membre->find($id);
+
+        $repo_commande = $this->getDoctrine()->getRepository(Commande::class);
+        $commandes = $repo_commande->findBy(['idMembre' => $id]);
+
+        $params = array(
+            'membre' => $membre,
+            'commandes' => $commandes
+        );
+
+        return $this->render("@Boutique/Admin/profil_client.html.twig", $params);
+    }
 
 }
