@@ -1,71 +1,104 @@
 {% extends 'layout.html.twig' %}
 
-{# {% block title %}Inscription Membre{% endblock %} #}
-
 {% block content %}
 
-<h1> Formulaire d'inscription</h1>
-<div class="container">
-    {# <div class="row">
-        <div class="col-6 mt-5">
-            {# Méthode très simple qui génère le formulaire entièrement #}
-            {# {{form(membreForm)}}  
-        </div>
-    </div> #} 
+
+    <h1 class="text-center">Formulaire D'Inscription</h1>
+
+    
     <div class="row">
-        <div class="col-6 mt-5">
-            {# Méthode pour générer nous même les champs du formulaire #}
-            {{ form_start(membreForm) }} 
-                {# On pourrait vouloir récupérer toutes les erreurs du formulaire en haut #}
-                {# Méthode 1 #}
-                {{ form_errors(membreForm) }}
-                <div class="form-group">
-                    {{ form_row(membreForm.pseudo)}}
-                </div>
-                <hr>
-                {# Methode 2 #}
-                <div class="form-group">
-                     {{form_widget(membreForm.prenom, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre prenom'}})}}
-                    {{form_widget(membreForm.prenom)}}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.nom, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre nom'}})}}
-                     {{ form_errors(membreForm.nom) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.mdp, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre mot de passe'}})}}
-                     {{ form_errors(membreForm.mdp) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.email, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre email'}})}}
-                     {{ form_errors(membreForm.email) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.civilite, {'attr' : {'class' : 'form-control'}})}}
-                     {{ form_errors(membreForm.civilite) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.ville, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre ville'}})}}
-                     {{ form_errors(membreForm.ville) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.codePostal, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre code postal'}})}}
-                     {{ form_errors(membreForm.codePostal) }}
-                </div>
-                <div class="form-group">
-                    {{form_widget(membreForm.adresse, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre adresse'}})}}
-                     {{ form_errors(membreForm.adresse) }}
-                </div>
+        <div class="col-6 offset-3">
+            {# Méthode très simple qui génère le formulaire entièrement #}
+            {#{{ form(membreForm) }}#}
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-6 offset-3">
+
+            {# Méthode très simple qui génère nous même les chemp du formulaire #}
+            {{ form_start(membreForm) }}
+
+
+            {# on pourrait vouloir récupérer toutes les erreurs du formulaires en haut : #}
+            {{ form_errors(membreForm)}}
+
+            <div class="form-group">
+                {{ form_row(membreForm.pseudo) }}
+            </div>
+
+
+            <div class="form-group">
+                <label for="">
+                    {{ form_label(membreForm.prenom) }}
+                </label>
+                {{ form_widget(membreForm.prenom) }}
+                {{ form_errors(membreForm.prenom) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.nom, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre nom'}}) }}
+                {{ form_errors(membreForm.prenom) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.mdp, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre password'}}) }}
+                {{ form_errors(membreForm.mdp) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.email, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre email'}}) }}
+                {{ form_errors(membreForm.email) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.civilite) }}
+                {{ form_errors(membreForm.civilite) }}   
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.email, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre email'}}) }}
+                {{ form_errors(membreForm.email) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.ville, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre ville'}}) }}
+                {{ form_errors(membreForm.ville) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.codePostal, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre codePostal'}}) }}
+                {{ form_errors(membreForm.codePostal) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_widget(membreForm.adresse, {'attr' : {'class' : 'form-control', 'placeholder' : 'Votre adresse'}}) }}
+                {{ form_errors(membreForm.adresse) }}
+            </div>
 
 
 
 
             {{ form_rest(membreForm) }}
-            {# form_rest esn très important car il génère le jeton CSRF et gère la sécurité #}
-            {{ form_end(membreForm) }}   
+            {# form_rest est très important car génère le jeton CSRF et gère la sécurité #}
+
+
+            {{ form_end(membreForm) }}
+
+
         </div>
     </div>
-</div>
+
+
+
+
+
+
+
+
+
+
 
 
 

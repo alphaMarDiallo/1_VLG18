@@ -3,15 +3,31 @@
 namespace BoutiqueBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Commande
  *
  * @ORM\Table(name="commande")
  * @ORM\Entity(repositoryClass="BoutiqueBundle\Repository\CommandeRepository")
+ * 
  */
 class Commande
 {
+
+    /**
+     * Une commande à un seul membre. nous sommes cpté propriétaire
+     * 
+     * @ORM\ManyToOne(targetEntity="Membre", inversedBy="commande")
+     * 
+     * @ORM\JoinColumn(name="id_membre", referencedColumnName="id_membre")
+     * 
+     */
+    private $membre;
+
+
+
+
     /**
      * @var integer
      *
@@ -36,7 +52,7 @@ class Commande
     private $montant;
 
     /**
-     * @var \DateTime
+     * @param \DateTime
      *
      * @ORM\Column(name="date_enregistrement", type="datetime", nullable=false)
      */
@@ -156,4 +172,32 @@ class Commande
     {
         return $this->etat;
     }
+
+
+    /**
+     * Set Membre
+     *
+     * @param string Membre
+     *
+     * @return Commande
+     */
+    public function setMembre (Membre $membre)
+    {
+        $this->membre = $membre;
+
+        return $this;
+    }
+
+    /**
+     * Get Membre
+     *
+     * @return object Membre
+     */
+    public function getMembre ()
+    {
+        return $this->membre;
+    }
+
+
+
 }

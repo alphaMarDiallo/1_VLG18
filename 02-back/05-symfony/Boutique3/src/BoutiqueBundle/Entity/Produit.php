@@ -47,14 +47,14 @@ class Produit
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @ORM\Column(name="description", type="text", length=65535, nullable=false)
      */
     private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="couleur", type="string", length=200, nullable=false)
+     * @ORM\Column(name="couleur", type="string", length=20, nullable=false)
      */
     private $couleur;
 
@@ -77,8 +77,8 @@ class Produit
      *
      * @ORM\Column(name="photo", type="string", length=250, nullable=true)
      */
-    private $photo;//nom de la photo stocké en BDD
-    private $file; //On mappe pas $file, car il n'a pas vocation à être enregistrer en BDD. Elle représente la photo(en tant que data)
+    private $photo; // nom de la photo stock en BDD
+    private $file; // on ne mappe pas $file, car n'a pas vocation à être enregistrer en BDD. Elle
 
     /**
      * @var float
@@ -346,52 +346,54 @@ class Produit
         return $this->stock;
     }
 
-    //getter & setter de $file
 
+    // getter et setter de $file
     public function setFile(UploadedFile $file = NULL){
-        $this->file = $file;
+        $this -> file = $file;
         return $this;
     }
+
     public function getFile(){
-        return $this->file;
+        return $this -> file;
     }
 
-    public function uploadedPhoto(){
-        //Fonction dont l'objectif est d'aller enregistrer notre photo dans le dosseir photo
+    public function uploadPhoto(){
+        // function dont l'objectif est d'aller enregistrer notre photo dans le dossier photo
+        // 1: changer le nom de la photo
+        $nom_photo = $this -> file -> getClientOriginalName();
+        $new_nom_photo = $this -> renameFile($nom_photo);
 
-        //1 : Changer le nom de la photo :
-        $nom_photo = $this->file->getClientOriginalName();
-        $new_nom_photo = $this->renameFile($nom_photo);
+        // 2: Définir le chemin de destination
+        $chemin = $this -> photoDir();
 
-        //2 : Définir le chemin de destination
-        $chemin = $this->photoDir();
+        // 3: Stocker le nom de la photo dans $photo pour que l'info soit enregistrée en BDD :
+        $this -> photo = $new_nom_photo;
 
+        // 4: Déplacer
+        $this -> file -> move($chemin, $new_nom_photo);
 
-        //3 : Stocker le nom de la photo dans $photo pour que l'info soit enregistré en BDD :
-        $this->photo = $new_nom_photo;
-
-
-        //3 : Déplacer la photo
-        $this->file->move($chemin, $new_nom_photo);
     }
-    
+
     public function renameFile($nom){
-        return 'photo' .time() . '_'.rand(1,999).'_' . $nom;
-        //Transform le nom de la photo de la manière suivante :
-            //ex : tshirt.jpg
-            // devient : photo_15656354_543_tshirt.jpg
+        return 'photo_' . time() . '_' . rand(1, 9999) . '_' . $nom;
+        // Transforme le nom de la photo de la manière suivante :
+            // ex : tshirt.jpg
+            // Devient : photo_123456_213131_tshirt.jpg
     }
 
     public function photoDir(){
-        return __DIR__.'/../../../web/photo';
+        return __DIR__ . '/../../../web/photo';
     }
 
     public function removePhoto(){
-        $file = $this->photoDir() . '/' . $this->getPhoto();
+        $file = $this -> photoDir() . '/' . $this -> getphoto();
         if($file){
             unlink($file);
         }
     }
+
+
+
 
 
 }

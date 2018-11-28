@@ -24,23 +24,23 @@ class Membre
     /**
      * @var int
      *
-     * @ORM\Column(name="id_membre", type="integer", unique=true)
+     * @ORM\Column(name="id_membre", type="integer")
      */
     private $idMembre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=50)
+     * @ORM\Column(name="nom", type="string", length=20)
      */
-    private $prenom;
+    private $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=30)
+     * @ORM\Column(name="prenom", type="string", length=20)
      */
-    private $nom;
+    private $prenom;
 
     /**
      * @var string
@@ -92,30 +92,6 @@ class Membre
     }
 
     /**
-     * Set prenom
-     *
-     * @param string $prenom
-     *
-     * @return Membre
-     */
-    public function setPrenom($prenom)
-    {
-        $this->prenom = $prenom;
-
-        return $this;
-    }
-
-    /**
-     * Get prenom
-     *
-     * @return string
-     */
-    public function getPrenom()
-    {
-        return $this->prenom;
-    }
-
-    /**
      * Set nom
      *
      * @param string $nom
@@ -137,6 +113,30 @@ class Membre
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return Membre
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
     }
 
     /**

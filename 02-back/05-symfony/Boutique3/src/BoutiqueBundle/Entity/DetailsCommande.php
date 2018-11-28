@@ -49,6 +49,8 @@ class DetailsCommande
      */
     private $prix;
 
+
+
     /**
      * Get idDetailsCommande
      *

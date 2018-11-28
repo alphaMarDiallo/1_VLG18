@@ -11,36 +11,42 @@ use BoutiqueBundle\Entity\Produit;
  */
 class ProduitRepository extends \Doctrine\ORM\EntityRepository
 {
-    //si j'ai des requêtes qui concernent exclusivement la table produit et qui sont spécifiques... je vais les coder ici plutôt que de la faire dans le controller.
-    //cela maintient un controller plus claire/générique
+    // Si j'ai des requêtes qui concernent exclusivement la table produit, et qui sont spécifiques...je vais les coder ici plutôt que de la faire dans le controller.
+    // cela maintient un controller plus claire/générique
 
-    //Fonction pour récupérer toutes les catégories via le queryBuilder()
-    public function findAllCategorie()
-    {
-        //nous avons besoin du Manager ici pour utiliser queryBuilder():
-        $em = $this->getEntityManager();
-        $query=$em->createQueryBuilder();
-        $query
-            ->select('p.categorie')
-            ->distinct(true)
-            ->from(Produit::class, 'p')
-            ->orderBy('p.categorie', 'ASC');
-        //on bâtit une fonction via des fonctions PHP de doctrine
-        return $query->getQuery()->getResult();
-        // exeécute la requête et on fetch.
+    // function pour récupérer toutes les categories vai le queryBuilder()
+    public function findAllCategorie(){
+        // nous avons besoin du manager ici pour utiliser queryBuilser()
 
+        $em = $this -> getEntityManager();
+		// Méthode QueryBuilder (PHP)
+		$query = $em -> createQueryBuilder();
+		$query
+			  -> select('p.categorie')
+			  -> distinct(true)
+			  -> from(Produit::class, 'p')
+			  -> orderBy('p.categorie','ASC');
+		// on bâtit une requête via des function PHP de doctrine.
 
-
+		return $query -> getQuery() -> getResult();
+		// on exécute la requete et on fatch.
     }
-    //Fonction pour récupérer toutes les catégories via le createQuery()
-    public function findAllCategorie2()
-    {
-        //nous avons besoin du Manager ici pour utiliser createQuery():
-        $query = $em->createQuery("SELECT DISTINCT p.categorie FROM BoutiqueBundle\Entity\Produit p ORDER BY p.categorie");
-        // Créer une requête en SQL via Doctrine
-        return $query->getResult();
-        // On exécute la requête et fetch.
 
+
+     // function pour récupérer toutes les categories vai le createQuery()
+    public function findAllCategorie2(){
+        // nous avons besoin du manager ici pour utiliser createQuery()
+        $em = $this -> getEntityManager();
+
+        $query = $em -> createQuery("SELECT DISTINCT p.categorie FROM BoutiqueBundle\Entity\Produit p ORDER BY p.categorie");
+		// on éxécute la requete en sql via Doctrine 
+
+		return $query -> getResult();
+		// on exécute la requete et on fetch
     }
+
+
+
+
 
 }

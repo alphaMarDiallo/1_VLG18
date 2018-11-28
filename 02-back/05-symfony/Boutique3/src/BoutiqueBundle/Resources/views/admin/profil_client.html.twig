@@ -1,36 +1,36 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}{% end block %}
+{% block title%}{%endblock%}
 
 {% block content %}
-    <h1>Fiche client de {{membre.pseudo}} (client N° {{membre.idMembre}} ) </h1>
+    <h1>Fiche client de {{ membre.pseudo }} (client N° {{ membre.idMembre }})</h1>
 
+    <ul>
+        <li>Pseudo : {{ membre.pseudo}}</li>
+        <li>Nom : {{ membre.nom}}</li>
+        <li>Prenom : {{ membre.prenom}}</li>
+        <li>Ville : {{ membre.ville}}</li>
+        <li>Adresse : {{ membre.adresse}}</li>
+    </ul>
 
-<ul>
-    <li>Pseudo : {{membre.pseudo}} </li>
-    <li>Nom : {{membre.nom}}</li>
-    <li>Prénom : {{membre.prenom}}</li>
-    <li>Ville : {{membre.ville}}</li>
-    <li>Adresse : {{membre.adresse}}</li>
-</ul>
+    <h2>Historique des achats :</h2>
+    <p>Nombre de Commandes : {{ membre.commandes | length }}</p>
 
-<table border="1">
-<tr>
-    <th>Id de la commande</th>
-    <th>Montant</th>
-    <th>Date</th>
-    <th>Etat</th>
-    <th colspan="3">Action</th>
-</tr>
-{% for cde in commandes %}
-    <tr>
-        <td>{{cde.idCommande}} </td>
-        <td>{{cde.montant | number_format(2,',','')}}€ </td>
-        <td>{{cde.dateEnregistrement | date("m/d/Y")}} </td>
-        <td>{{cde.etat}} </td>
-    </tr>
-{% endfor  %}
-</table>
-
+    <table border="1">
+            <tr>
+                <th>Id de la commande</th>
+                <th>Montant</th>
+                <th>Date</th>
+                <th>Etat</th>
+            </tr>
+        {% for cde in membre.commandes %}
+            <tr>
+                <td>{{cde.idCommande}}</td>
+                <td>{{cde.montant | number_format(2, ',', ' ') }}</td>
+                <td>{{cde.dateEnregistrement | date("m/d/Y") }}</td>
+                <td>{{cde.etat}}</td>
+            </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'layout.html.twig' %}
+
+{% block title%}{{ title }}{%endblock%}
+
+{% block content %}
+
+<h1 class="border border-warning alert-primary text-center mt-3 font-italic">{{ title }}</h1>
+
+{% for message in app.session.flashbag.get('success')%}
+    <span class="alert alert-success">{{message}}</span> <br>
+{% endfor %}
+
+{% for message in app.session.flashbag.get('error')%}
+    <span class="alert alert-danger">{{message}}</span> <br>
+{% endfor %}
+
+
+
+<div class="row mt-4">
+    <div class="col-12">
+
+        <p style="text-align: right;"><strong>Nombre De membres dans la Boutique : {{membres | length}}</strong></p>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Id du membre</th>
+                <th>Pseudo</th>
+                <th>Prenom - Nom</th>
+                <th>Email</th>
+                <th>code Postal</th>
+                <th>statut</th>
+                <th colspan="2">Action</th>
+
+            </tr>
+            {% for membre in membres %}
+                <tr>
+
+                    <td>{{membre.idMembre}}</td>
+                    <td>{{membre.pseudo}}</td>
+                    <td>
+                        {% if membre.civilite == 'm' %}
+                            Mr {{ membre.prenom }} {{ membre.nom | upper }}
+                        {% else %}
+                            Me {{ membre.prenom }} {{ membre.nom | upper }}
+                        {% endif %}
+                    </td>
+
+                    <td>{{membre.email}}</td>
+                    <td>{{membre.codePostal}}</td>
+
+                    {% if membre.statut == 1 %}
+                        <td class="text-info"><strong>Admin</strong></td>
+                    {% else %}
+                        <td class="text-primary ">Client</td>
+                    {% endif %}
+                        
+
+                    <td>
+                        <a href="{#{{path('update_membre', {'id' : membre.idMembre})}}#}">
+                            <i class="text-dark fas fa-edit"></i>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a target="_blank" href="{{path('profil_client', {'id' : membre.idMembre})}}">
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="{{path('delete_membre', {'id' : membre.idMembre})}}">
+                            <i class="text-danger fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+        
+                </tr>
+            {% endfor %}
+            
+        </table>
+    </div>
+</div>
+
+{% endblock %}

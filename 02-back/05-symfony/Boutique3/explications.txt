@@ -14,10 +14,11 @@ ETAPE  7 : Nos Entités
 ETAPE  8 : Doctrine
 ETAPE  9 : Les formulaires
 ETAPE 10 : Validations des données
-ETAPE 11 : Sécurité et Utilisateurs
-ETAPE 12 : Les services
-ETAPE 13 : Les évènements
-ETAPE 14 : Symfony 4 (BundleLess et Flex)
+ETAPE 11 : Association Mapping
+ETAPE 12 : Sécurité et Utilisateurs
+ETAPE 13 : Les services
+ETAPE 14 : Les évènements
+ETAPE 15 : Symfony 4 (BundleLess et Flex)
 
 -------------------------------
 INTRO : Qu'est-ce que Symfony ? 
@@ -799,3 +800,94 @@ lien :
 	-> On ajouote à nos fonction du controller (update_produit et add_produit) la fonction uploadedPhoto() et removePhoto() avant flush() les infos du formulaire. 
 
 	/!\ En utilisant Symfony de manière plus avancée, on pourrait utiliser les évènements pour rendre certaines choses plus automatiques comme par exemple supprimer tout seul une photo lorsque'une nouvelle est chargée.
+
+
+---------------------------
+ETAPE 11 : Association Mapping
+---------------------------
+1/ Qu'est ce l'association Mapping
+2/ Les types de mapping
+3/ Mise en place du mapping(membre->Produit)
+4/ Utiliser le mapping dans les formulaire 
+------------------------------------
+1/ Qu'est ce l'association Mapping
+
+	- Nos BDD relationnelles (Modèle Merise), expriment des relations existantes entre les differentes tables.
+		ex: - Une commande est liée à un membre (et un seul)
+			- Un membre peut être lié à zéro ou plusieurs commande
+
+	- Pour manipuler les datas d'une table à une autre, on peut utiliser les JOINTURES. Mais cela s'avère parfois délicat (ex : si je récupère tous les membre, et pour chacun toutes ses commandes et pour chaque commande tous les détails et pour chaque détails la photo du produit ) , il faut ruser et recomposer/utiliser des tableaux de données compliqué.
+		--> L'ensemble de la démarche est très compliqué
+
+
+	- l'ORM	de Doctrine nous permet de lier les entités entre-elles et donc de rendre la relation concepte, même dans le code. Ainsi lorsque  je manipule un objet Membre, j'ai accès à tous les objets Commande dont il est lié. Et inversement quand je manipule un objet Commande j'ai accès à tous les objets Membre dont il dépend.
+
+
+
+
+2/ Les types de mapping
+
+	- Liens :
+		https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/association-mapping.html
+
+3/ Mise en place du mapping(membre->Produit)
+	- lE MAPPING SE PARA7TRE VIA LES Annotation;
+	- Le paramètrage doit être effectué des deux coté (Entity Membre et sur l'Entity Commande) 
+	- La class ArraColllection permet de définir qu'une propriété d'une Entité est en fait un groupe d'objet.
+	(ex : Un membre peur avoir plusieurs Commandes sous la forme d'un ArraColllection)
+
+	==> A partit de là quand je récupère un membre, alors je récupère toutes ses commandes (twig : membre.commandes)
+
+4/ Utiliser le mapping dans les formulaire 
+
+	- Maintenant que les Entités membre et commande sont liés, lorsque l'on ajoute une commande il faudrait choisir le membre qui a passé la commande sous forme d'un objet et nom d'un champs id_membre 
+	- voir commandeType.php 
+	===> Dans notre application, il faudrait lier :
+		- Commande et détails_commande : OneToMany Unidirectionnel 
+		- Détails_commande et produit : OneToMany Unidirectionnel 
+		- Produit et Details_commande : ManyToOne Unidirectionnel
+
+		suggestion : 
+		- Commande et Produit : ManyToMany bidirectionnel
+
+
+
+
+
+---------------------------------------
+ETAPE 12 : Sécurité et Utilisateurs
+---------------------------------------
+Sommaire :
+1/ Niveaux de sécurité
+2/ fichier de sécurité 
+3/ Classe Membre 
+4/ inscription
+4/ Accessibilité 
+Bonus : FosUserBundle 
+--------------------------------- 
+
+1/ Niveaux de sécurité
+	- Sur Symfony il existe 3 niveaux de sécurité : 
+		-> Anonyme (visiteur lambda)
+		-> User Identifié (ROLE_USER) 
+		->User avec des droits (ROLE_ADMIN)
+
+
+
+	- Le système de sécurité sz comporte comme un parfeu sur chaque page. Symfony va tester le statut de l'utilisatateur et fournir la ressource (la page)
+		-> si user est anonyme, ressource est dispo : OK
+		-> si user anonyme, ressource est NA : ---> connexion 
+		-> si user connecté, ressource est dispo : OK
+		-> si user connecté, ressource est NA : ---> Erreur
+
+2/ fichier de sécurité
+
+	fichier : app/config/security.yml
+
+
+
+
+3/ Classe Membre 
+4/ inscription
+4/ Accessibilité 
+Bonus : FosUserBundle 

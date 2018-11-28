@@ -3,16 +3,16 @@
 namespace BoutiqueBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
-
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -28,58 +28,55 @@ class MembreType extends AbstractType
                 'required' => false,
                 'constraints' => array(
                     new Assert\NotBlank(array(
-                        'message' => 'Veuillez renseigner votre pseudo.',
+                        'message' => 'Veuillez renseigner votre pseudo'
                     )),
                     new Assert\Length(array(
-                        'min' => 3,
-                        'minMessage' => 'Votre psudo doit contenir 3 caractère minimum.',
-                        'max' => 20,
-                        'maxMessage' => 'Votre psudo doit contenir au maximum 20 caractère.',
-
+                        'min' => '3',
+                        'minMessage' => 'Votre Pseudo doit contenir 3 caractère minimum',
+                        'max' => '20',
+                        'maxMessage' => 'Votre Pseudo doit contenir maximum 20 caractère'
                     )),
                     new Assert\Regex(array(
                         'pattern' => '/^[a-zA-Z-._0-9]+$/',
-                        'message' => 'Le pseudo accepte les carractère et les chiffres.'
+                        'message' => 'Le pseudo accepte les lettres et les chiffres'
                     ))
                 )
             ))
             ->add('mdp', PasswordType::class)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
-            ->add('email', EmailType::class)
+            ->add('email', TextType::class)
             ->add('civilite', ChoiceType::class, array(
-                'choices'=>array(
-                    'Homme'=>'m',
-                    'Femme'=>'f'
+                'choices' => array(
+                    'Homme' => 'm',
+                    'Femme' => 'f'
                 )
             ))
             ->add('ville', TextType::class)
             ->add('codePostal', IntegerType::class, array(
-                'required'=>false,
-                'constraints'=>array(
-                        new Assert\NotBlank,
-                        new Assert\Type(array(
-                            'type'=>'integer',
-                            'message' => 'Votre code postal doit être composé de 5 chiffres'
-                        ))
-                    ),
-                    'attr' =>array(
-                        'placeholder'=>'ex : 75001',
-                        'class'=>'form-controle',
-                    )
+                'required' => false,
+                'constraints' => array(
+                    new Assert\NotBlank,
+                    new Assert\Type(array(
+                        'type' => 'integer',
+                        'message' => 'Votre code postal doit être composé de 5 chiffres'
+                    ))
+                ),
+                'attr' => array(
+                    'placeholder' => 'ex:75001',
+                    'class' => 'form-control'
+                )
             ))
             ->add('adresse', TextType::class)
             ->add('statut', IntegerType::class)
             ->add('save', SubmitType::class);
-    }
-
-    /**
+    }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'BoutiqueBundle\Entity\Membre',
+            'data_class' => 'BoutiqueBundle\Entity\Membre'
         ));
     }
 
@@ -90,5 +87,6 @@ class MembreType extends AbstractType
     {
         return 'boutiquebundle_membre';
     }
+
 
 }

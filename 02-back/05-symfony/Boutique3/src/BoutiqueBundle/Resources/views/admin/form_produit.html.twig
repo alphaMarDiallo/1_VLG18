@@ -1,8 +1,9 @@
 {% extends 'layout.html.twig' %}
 
+{% block title%}{{ title }}{%endblock%}
+
 {% block content %}
-    <h1> {{title}} </h1>
-<div class="col-6 mt-2">
-    {{form(produitForm)}}
-</div>
-{% endblock  %}
+    <h1>{{ title }}</h1>
+    {{ form(produitForm)}}
+
+{% endblock %}

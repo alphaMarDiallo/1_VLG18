@@ -6,16 +6,16 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Form\Extension\Core\Type\MoneyType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 use Symfony\Component\Validator\Constraints as Assert;
-
 
 class ProduitType extends AbstractType
 {
@@ -62,10 +62,10 @@ class ProduitType extends AbstractType
                 )
             ))
             ->add('public', ChoiceType::class, array(
-                'choices'=>array(    
+                'choices' => array(
                     'Homme' => 'm',
                     'Femme' => 'f',
-                    'Mixte' => 'mixte'
+                    'Mixte' => 'mixte',
                 )
             ))
             ->add('file', FileType::class, array(
@@ -83,11 +83,10 @@ class ProduitType extends AbstractType
                     new Assert\NotBlank,
                 )
             ))
-            ->add('save', SubmitType::class, array());
-        }
-        /**
-         * {@inheritdoc}
-         */
+            ->add('save', SubmitType::class);
+    }/**
+     * {@inheritdoc}
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
