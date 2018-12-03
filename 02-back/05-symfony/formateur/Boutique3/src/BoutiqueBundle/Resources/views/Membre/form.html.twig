@@ -1,0 +1,61 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+	<h1>Formulaire d'inscription</h1>
+	
+	<div class="row">
+		<div class="col-6">
+		{# Méthode très simple qui génère le formulaire entièrement #}
+		{# {{ form(membreForm) }} #}
+		</div>	
+	</div>
+
+	
+	<div class="row">
+		<div class="col-6">
+		
+		{# Méthode pour générer nous-même les champs du formulaire #}
+		{{ form_start(membreForm) }}
+		
+		
+		{# On pourrait vouloir récupérer toutes les erreurs du formulaires en haut :  #}
+		{{ form_errors(membreForm) }}
+		
+		
+		<div class="form-group">
+			{{ form_row(membreForm.pseudo) }}
+		</div>
+		
+		<div class="form-group">
+			<label>
+				{{ form_label(membreForm.prenom) }}
+			</label>
+			{{ form_widget(membreForm.prenom) }}
+			{{ form_errors(membreForm.prenom) }}
+		</div>
+		
+		<div class="form-group">
+			{{ form_widget(membreForm.nom, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Votre nom'} }  ) }}
+			{{ form_errors(membreForm.nom) }}
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		{{ form_rest(membreForm) }}
+		{# form_rest est très important car génère le jeton CSRF et gère la sécurité #}
+		{{ form_end(membreForm) }}
+		
+		</div>
+	</div>
+	
+	
+	
+	
+
+{% endblock %}
