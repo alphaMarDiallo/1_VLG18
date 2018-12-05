@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alpha Diallo</title>
-    {% block head_css %}
     <!-- CSS bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <!-- CSS perso -->
-    <link rel="stylesheet" href="../../../web/lib/css/styles.css">
-    {% endblock %}
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -23,20 +21,39 @@
        <nav class="navbar navbar-expand-lg mb-4 fixed-top navbar-light">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href= {#"{{path('home') }}"#}>En quelques mots</a> 
+                    <a class="nav-link" href= "{{path('home') }}">En quelques mots</a> 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Ce que je fais</a>
+                    <a class="nav-link" href="{{path('competence') }}">Ce que je fais</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="?select=xp">Mes itinéraires</a>
+                    <a class="nav-link" href="{{path('schooling') }}">Mes itinéraires</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Mon parcours</a>
+                    <a class="nav-link" href="{{path('xp') }}">Mon parcours</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">contact</a>
+                    <a class="nav-link" href="{{path('contact') }}">contact</a>
                 </li>
+                {# {% if user.statut = 1 %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Gestion des compétences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Gestion des expériences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Gestion des formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Gestion des loisirs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Gestion de l'admin</a>
+                </li>
+
+                {% endif %} #}
             </ul>
        </nav><!-- /.navbar -->
        <main class="container">
