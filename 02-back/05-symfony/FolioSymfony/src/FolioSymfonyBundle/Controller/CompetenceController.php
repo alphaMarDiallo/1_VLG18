@@ -2,12 +2,12 @@
 
 namespace FolioSymfonyBundle\Controller;
 
+
+
+use FolioSymfonyBundle\Entity\Competences;
+use FolioSymfonyBundle\Entity\Projects;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Request;
-
 
 class CompetenceController extends Controller
 {
@@ -16,8 +16,18 @@ class CompetenceController extends Controller
      */
     public function competenceAction()
     {
-        
-        $em = $this->getDoctrine()->getManager();
-        return $this->render('@FolioSymfony\Competence\compWorks.html.twig');
+        $repository = $this->getDoctrine()->getRepository(Competences::class);
+        $repository2 = $this->getDoctrine()->getRepository(Projects::class);
+
+        $competences = $repository->findAll();
+        $projects = $repository2->findAll();
+
+        $params = array(
+            'competences' => $competences,
+            'projects' => $projects
+        );
+
+        return $this->render('@FolioSymfony\Competence\compWorks.html.twig', $params);
     }
+
 }

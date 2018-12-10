@@ -2,6 +2,9 @@
 
 namespace FolioSymfonyBundle\Controller;
 
+use FolioSymfonyBundle\Entity\Languages;
+use FolioSymfonyBundle\Entity\Schooling;
+
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -12,6 +15,16 @@ class SchoolingController extends Controller
      */
     public function SchoolingAction()
     {
-        return $this->render('@FolioSymfony\schooling\schooling.html.twig');
+        $repository = $this->getDoctrine()->getRepository(Schooling::class);
+        $repository2 = $this->getDoctrine()->getRepository(Languages::class);
+
+        $schoolings = $repository->findAll();
+        $languages = $repository2->findAll();
+
+        $params = array(
+            'schoolings' => $schoolings,
+            'languages' => $languages,
+        );
+        return $this->render('@FolioSymfony\schooling\schooling.html.twig', $params);
     }
 }

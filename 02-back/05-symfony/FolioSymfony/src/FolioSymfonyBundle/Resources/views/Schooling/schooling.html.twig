@@ -13,24 +13,14 @@
                 </tr>
             </thead>
             <tbody>
+            {% for schooling in schoolings %}
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row"> {{schooling.sgdate}} </th>
+                    <td> {{schooling.sgtitle}} </td>
+                    <td>{{schooling.sgsubtitle}} </td>
+                    <td>{{schooling.sgdescription}} </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
@@ -46,13 +36,25 @@
                 </tr>
             </thead>
             <tbody>
+            
+                 {% for language in languages %}
                  <tr>
-                    <th scope="row">Anglais</th>
-                    <td></td>
+                    <th scope="row"> {{language.lglanguage}} </th>
+                    <td>
+                    {% if language.lglevel == 1 %}
+                        <span class="text-info">Débutant</span>
+                    {% elseif language.lglevel == 2 %} #}
+                         <span class="text-info">Intermédiaire</span>
+                    {% elseif language.lglevel == 3 %}
+                         <span class="text-info">Avancé</span>
+                    {% elseif language.lglevel == 4 %}
+                         <span class="text-info">Expert</span> 
+                      {% endif %}  
+                    </td>
                 </tr>
+                 {% endfor %} 
             </tbody>
         </table>
     </div>
-</div>
-    
+</div>    
 {% endblock %}

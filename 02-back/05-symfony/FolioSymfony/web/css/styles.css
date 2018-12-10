@@ -2,3 +2,20 @@
 body {
     background: url('../img/pattern/dark_embroidery.png') repeat;
 }
+
+
+
+i {
+    /* height: 50px; */
+    /* width: 50PX; */
+    font-size: 5em;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.card {
+    background-color: transparent;
+}
