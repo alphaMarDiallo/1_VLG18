@@ -2,10 +2,13 @@
 
 namespace FolioSymfonyBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
+// use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use FolioSymfonyBundle\Entity\Xp;
+// use Doctrine\ORM\EntityManagerInterface;
+
 
 class XpController extends Controller
 {

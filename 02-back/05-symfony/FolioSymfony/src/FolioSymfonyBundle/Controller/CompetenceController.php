@@ -6,7 +6,8 @@ namespace FolioSymfonyBundle\Controller;
 
 use FolioSymfonyBundle\Entity\Competences;
 use FolioSymfonyBundle\Entity\Projects;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
+// use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class CompetenceController extends Controller

@@ -1,53 +1,58 @@
-{% extends 'layout.html.twig' %}
+{% extends 'adminLayout.html.twig' %}
 
 {% block content %}
 
-    <div class="row">
+     <div class="container">
+        <div class="row">
+            <div class= "col-lg-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Technology</th>
+                            <th scope="col">niveau</th>
+                            <th colspan="2">Action</th>
 
-        <table class="table table-striped mt-5">
-            <thead>
-                <tr>
-                <th scope="col">Technology</th>
-                <th scope="col">Niveau</th>
-                <th colspan="2">Modiffication</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                <th scope="row"></th>
-                <td>
-                    <select>
-                    
-                        <option>0</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </td>
-                <td>
-                    <a href="{#{{path('update_membre', {'id' : membre.idMembre})}}#}">
-                        <i class="text-dark fas fa-edit"></i>
-                    </a>    
-                </td>
-                <td>
-                    <a href="{#{{path('update_membre', {'id' : membre.idMembre})}}#}">
-                         <i class="text-danger fas fa-trash-alt"></i>
-                    </a>    
-                </td>
-                </tr>
-            </tbody>    
-        </table>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="card mt-3" style="width: 18rem;">
-            <img class="card-img-top" src="../../../../../web/lib/img/realisation/images_1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h3>Title</h3>
-              <a href="">link</a>
+                        </tr>
+                    </thead>
+                    <tbody>
+                     {% for competence in competences %}
+                        <tr>
+                            <th scope="row">
+                                <i class="img-fluid {{competence.cptechnology}}"></i>
+                            </th>
+                            <td>
+                            {% if competence.cplevel == 1 %}
+                                <span class="text-info">Débutant</span>
+                            {% elseif competence.cplevel == 2  %}
+                                <span class="text-info">Intermédiaire</span>
+                            {% elseif competence.cplevel == 3  %}
+                                <span class="text-info">Avancé</span>
+                            {% elseif competence.cplevel == 4  %}
+                                <span class="text-info">Expert</span>
+                            {% endif %}
+                                {# <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select> #}
+                            </td>
+                            <td>
+                                <a target="_blank" href="{{path('competence',{'id' : competence.idcompetence})}} ">
+                                    <i class="fas fa-wrench"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a target="_blank" href="{{path('competence',{'id' : competence.idcompetence})}} ">
+                                  <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    
+ 
 {% endblock %}

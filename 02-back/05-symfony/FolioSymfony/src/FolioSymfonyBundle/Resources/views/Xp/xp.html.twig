@@ -15,7 +15,13 @@
       <tbody>
         {% for xp in xps %}
           <tr>
-            <th scope="row">  {{xp.xpyear1 | date("d/m/Y")}}  -  {{xp.year2 | date("d/m/Y")}}  </th>   
+            <th scope="row">
+            {% if xp.xpyear1 == xp.xpyear2 %}
+              depuis
+            {% else %}
+              {{xp.xpyear1}} -
+            {% endif%}
+               {{xp.xpyear2}} </th> 
             <td> {{xp.xpfunction}}</td>
             <td> {{xp.xpemployer}}</td>
             <td> {{xp.xpresume}}</td>

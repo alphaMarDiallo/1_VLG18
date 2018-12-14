@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alpha Diallo</title>
+    <!-- CSS bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- CSS perso -->
+ <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid navbar-preview fixed-top mt-5">
+
+        <div class="row">
+            <div class="col-lg-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="col-lg-3" id="side">
+                <nav class="nav flex-column">
+                    <div class="pos-f-t">
+                        <div class="collapse" id="navbarToggleExternalContent">
+                            <div class="bg-dark p-4">
+                                <h5 class="text-white h4">Back-office</h5>
+                                <ul class="list-unstyle component">    
+                                    <li><a href="">Competence</a></li>
+                                    <li><a href="">Projets</a></li>
+                                    <li><a href="">Expérience</a></li>
+                                    <li><a href="">Formation</a></li>
+                                    <li><a href="">Contact</a></li>
+                                    <li><a href="">Utilisateur</a></li>   
+                                </ul>
+                                <h5 class="text-white h4">Front</h5>
+                                    <ul class="list-unstyle component">    
+                                        <li><a href="">Competence</a></li>
+                                        <li><a href="">Formation</a></li>  
+                                    </ul> 
+                            </div>
+                        </div>
+                        <nav class="navbar navbar-dark bg-dark">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </nav>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+
+      
+        
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> 
+

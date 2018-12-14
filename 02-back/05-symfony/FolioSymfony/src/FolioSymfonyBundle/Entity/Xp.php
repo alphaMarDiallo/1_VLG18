@@ -22,16 +22,16 @@ class Xp
     private $idxp;
 
     /**
-     * @var \Date
+     * @var string
      *
-     * @ORM\Column(name="xpyear1", type="date", nullable=false)
+     * @ORM\Column(name="xpyear1", type="string", nullable=false)
      */
     private $xpyear1;
 
     /**
-     * @var \Date
+     * @var string
      *
-     * @ORM\Column(name="xpyear2", type="date", nullable=false)
+     * @ORM\Column(name="xpyear2", type="string", nullable=false)
      */
     private $xpyear2;
 
@@ -56,8 +56,6 @@ class Xp
      */
     private $xpresume;
 
-
-
     /**
      * Get idxp
      *
@@ -71,7 +69,7 @@ class Xp
     /**
      * Set xpyear1
      *
-     * @param \Date $xpyear1
+     * @param string $xpyear1
      *
      * @return Xp
      */
@@ -85,7 +83,7 @@ class Xp
     /**
      * Get xpyear1
      *
-     * @return \Date
+     * @return string
      */
     public function getXpyear1()
     {
@@ -95,11 +93,11 @@ class Xp
     /**
      * Set xpyear2
      *
-     * @param \Date $xpyear2
+     * @param string $xpyear2
      *
      * @return Xp
      */
-    public function setXpyear2()
+    public function setXpyear2($xpyear2)
     {
         $this->xpyear2 = $xpyear2;
 
@@ -109,7 +107,7 @@ class Xp
     /**
      * Get xpyear2
      *
-     * @return \Date
+     * @return string
      */
     public function getXpyear2()
     {

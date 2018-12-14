@@ -43,9 +43,9 @@ class Schooling
     private $sgdate;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="sgdescription", type="integer", nullable=false)
+     * @ORM\Column(name="sgdescription", type="string", nullable=false)
      */
     private $sgdescription;
 
@@ -136,7 +136,7 @@ class Schooling
     /**
      * Set sgdescription
      *
-     * @param integer $sgdescription
+     * @param string $sgdescription
      *
      * @return Schooling
      */
@@ -150,7 +150,7 @@ class Schooling
     /**
      * Get sgdescription
      *
-     * @return integer
+     * @return string
      */
     public function getSgdescription()
     {
