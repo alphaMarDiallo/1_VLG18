@@ -3,13 +3,27 @@ body {
     background: url('../img/pattern/dark_embroidery.png') repeat;
 }
 
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #fff;
+}
 
 i {
-    /* height: 50px; */
-    /* width: 50PX; */
-    font-size: 5em;
+    font-size: 1.5em;
     text-align: center;
+}
+
+i:hover {
+    cursor: pointer;
+    /*change l'aspect du curseur*/
+    transform: scale(2);
+    /* transforme applique un effet de 2d et scale() correspond à l'chelle du zoom ainsi obtenu par rapport à la taille d'origineé*/
+    text-decoration: 2s;
 }
 
 p {

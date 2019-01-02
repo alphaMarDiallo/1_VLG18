@@ -7,20 +7,21 @@
             <div class= "col-lg-12">
                 <table class="table">
                     <thead class="thead-dark">
+                    {% for schooling in schoolings %}
                         <tr>
-                            <th scope="col">Technology</th>
-                            <th scope="col">niveau</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Années</th>
+                            <th scope="col">Diplôme</th>
+                            <th scope="col">Spécialité</th>
+                            <th scope="col">Description</th>
                              <th colspan="2">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row"> {{schooling.sgdate}} </th>
+                            <td>{{schooling.sgtitle}} </td>
+                            <td>{{schooling.sgsubtitle}} </td>
+                            <td> {{schooling.sgdescription}} </td>
                             <td>
                                 <a href="">
                                     <i class="fas fa-certificate"></i>
@@ -32,6 +33,7 @@
                                 </a>
                             </td>
                         </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>

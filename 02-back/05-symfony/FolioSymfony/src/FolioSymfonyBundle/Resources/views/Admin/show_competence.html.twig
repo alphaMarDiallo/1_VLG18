@@ -38,19 +38,24 @@
                                 </select> #}
                             </td>
                             <td>
-                                <a target="_blank" href="{{path('competence',{'id' : competence.idcompetence})}} ">
-                                    <i class="fas fa-wrench"></i>
+                                <a href="" title="modifier">
+                                    <i class="fas fa-wrench text-success"></i>
                                 </a>
                             </td>
                             <td>
-                                <a target="_blank" href="{{path('competence',{'id' : competence.idcompetence})}} ">
-                                  <i class="fas fa-trash-alt"></i>
+                                <a  href="{{path('competence',{'id' : competence.idcompetence})}} ">
+                                  <i class="fas fa-trash-alt text-danger" title="supprimer"></i>
                                 </a>
                             </td>
                         </tr>
                         {% endfor %}
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-lg-8 mt-5">
+                <a class="btn btn-block alert-secondary" href="{#{{path('add_competence')}}#}">Ajouter une nouvelle competence </a>
             </div>
         </div>
     </div>
