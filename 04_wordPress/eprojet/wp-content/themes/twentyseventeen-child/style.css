@@ -1,0 +1,13 @@
+/*
+Theme Name: twentyseventeen-child
+Template:  twentyseventeen
+*/
+
+/*ne pas séparer les ":" du nom des éttiquettes "Theme Name" et "Template" par un espace*/
+
+@import url('../twentyseventeen/style.css'); /*pour importer le CSS du parent*/
+
+.wrap{
+    background: bisque;
+}
+

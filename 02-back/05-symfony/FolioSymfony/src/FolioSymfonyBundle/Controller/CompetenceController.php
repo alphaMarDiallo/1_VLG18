@@ -31,4 +31,6 @@ class CompetenceController extends Controller
         return $this->render('@FolioSymfony\Competence\compWorks.html.twig', $params);
     }
 
+  
+
 }

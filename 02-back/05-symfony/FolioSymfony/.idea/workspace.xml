@@ -2,17 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89616ceb-af8b-40fa-9146-00dab5493e66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../01_front/01_html_css/bootstrap/02_base cdn.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01_front/01_html_css/bootstrap/02_base cdn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01_front/01_html_css/img/bkg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01_front/02_JS/assets/js/01.lesVariable.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01_front/02_JS/assets/js/01.lesVariable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../01_front/02_JS/assets/js/02.lesTableaux.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../01_front/02_JS/assets/js/02.lesTableaux.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/adminLayout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/adminLayout.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/profil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/show_competence.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/show_competence.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/show_schooling.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/show_schooling.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/CompetenceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/CompetenceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Entity/Competences.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Entity/Competences.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Entity/Hobbies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Form/CompetenceType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/CompetenceForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/CompetenceForm.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Contact/Contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Contact/Contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Home/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Home/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../999_workshop/04_TP04-eshop/img/btn-left.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../999_workshop/04_TP04-eshop/img/btn-right.JPG" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,18 +32,6 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Form/CompetenceType.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="836">
-                  <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-                  <folding>
-                    <element signature="e#43#83#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/CompetenceForm.html.twig">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="154">
@@ -50,23 +42,29 @@
           </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-              <provider selected="true" editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="242">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/AdminController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-182">
-                  <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-                  <folding>
-                    <element signature="e#127#169#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="743">
+                  <caret line="88" selection-start-line="88" selection-end-line="88" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/DefaultController.php">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -142,10 +140,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1923" />
-    <option name="y" value="-9" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -169,12 +167,6 @@
             <path>
               <item name="FolioSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FolioSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -188,31 +180,7 @@
               <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="FolioSymfonyBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FolioSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FolioSymfonyBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FolioSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FolioSymfonyBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FolioSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FolioSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FolioSymfonyBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -222,7 +190,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../2_Production/SitePortefolio" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -255,19 +223,21 @@
       <workItem from="1545902284312" duration="1977000" />
       <workItem from="1545904341964" duration="4377000" />
       <workItem from="1545909046263" duration="7631000" />
+      <workItem from="1548093203534" duration="86000" />
+      <workItem from="1551439058854" duration="656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17936000" />
+    <option name="totallyTimeSpent" value="18678000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15245202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Missing In Actions" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -279,11 +249,12 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Missing In Actions" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info active="true" anchor="right" content_ui="combo" x="281" y="611" width="1284" height="304" id="Terminal" order="4" type="WINDOWED" visible="true" weight="0.32936078" />
+      <window_info anchor="right" content_ui="combo" x="281" y="611" width="1284" height="304" id="Terminal" order="4" type="WINDOWED" visible="true" weight="0.32936078" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,19 +290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Form/CompetenceType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
-          <folding>
-            <element signature="e#43#83#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/show_competence.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -339,6 +297,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Form/CompetenceType.php" />
     <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Resources/views/Admin/CompetenceForm.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -346,17 +305,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding>
-            <element signature="e#127#169#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="242">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FolioSymfonyBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>

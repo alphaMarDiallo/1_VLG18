@@ -1,6 +1,6 @@
 // alert("mon fichier JS fonctionne !");
 
-// Deux slaches pour un commentaire sur unr ligne
+// Deux slaches pour un commentaire sur une ligne
 /* 
     Ici commentaire 
     sur 
@@ -20,7 +20,7 @@ console.log(Prenom);
 
 /*--------------------------------------
         LES TYPES DES VARIABLES
---------------------------------------*/ 
+--------------------------------------*/
 
 // -- typeof, me permet de connaitre le type de ma variable
 console.log(typeof Prenom);
@@ -33,7 +33,7 @@ console.log(typeof Age);
 
 /*--------------------------------------
         LA PORTEE DES VARIABLES
---------------------------------------*/ 
+--------------------------------------*/
 
 /* 
 Les variables déclarés directement à la racine du fichier JS son appelées : variables GLOBALES.
@@ -76,7 +76,7 @@ console.log(unNombre);
 console.log(typeof unNombre);
 
 // -- Pour  convertir un float
-unNombre =" 12.55";
+unNombre = " 12.55";
 unNombre = parseFloat(unNombre);
 console.log(unNombre);
 console.log(typeof unNombre);
@@ -86,4 +86,3 @@ unNombre = 10;
 var monString = unNombre.toString();
 console.log(monString);
 console.log(typeof monString);
-
