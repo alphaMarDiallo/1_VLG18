@@ -49,9 +49,3 @@ echo '<br>Panier1 : ' . $panier1->nbProduit . ' produits <br>';
 	Ici, $panier1 (et $panier2) représente l'objet issue de la classe Panier
 
 Plus : Quand on instancie une classe, la variable stockant l'objet ne stocke en fait pas l'objet lui-meme, mais un identifiant qui représente cet objet (espace mémoire en ram sur le serveur)
-
-
-
-
-
-

@@ -15,10 +15,9 @@ II. Afficher sur la page (à l'aide de document.write) pour chaque étudiant, la
 de sa moyenne à chaque matière, puis sa moyenne générale. 
 */
 
-var PremierTrimestre = [
-    {
+var PremierTrimestre = [{
         prenom: "Hugo",
-        nom:    "LIEGEARD",
+        nom: "LIEGEARD",
         moyenne: {
             francais: 4,
             math: 6,
@@ -27,7 +26,7 @@ var PremierTrimestre = [
     },
     {
         prenom: "Luc",
-        nom:    "JOINVIL",
+        nom: "JOINVIL",
         moyenne: {
             francais: 4,
             math: 5,
@@ -38,7 +37,7 @@ var PremierTrimestre = [
     },
     {
         prenom: "Layla",
-        nom:    "LAHCENE",
+        nom: "LAHCENE",
         moyenne: {
             francais: 17,
             math: 2,
@@ -49,7 +48,7 @@ var PremierTrimestre = [
     },
     {
         prenom: "Alpha",
-        nom:    "DIALLO",
+        nom: "DIALLO",
         moyenne: {
             francais: 12,
             math: 8,
@@ -60,7 +59,7 @@ var PremierTrimestre = [
     },
     {
         prenom: "Elies",
-        nom:    "KEDIM",
+        nom: "KEDIM",
         moyenne: {
             francais: 2,
             math: 18,
@@ -77,23 +76,23 @@ var sommes = 0;
 var rowCount = 0;
 // affiche les élèves en parcourant le tableau:
 document.write("<ol>");
-for(let i = 0; i < tableau; i++){
-    document.write("<li>"+PremierTrimestre[i].prenom+' '+PremierTrimestre[i].nom +"</li>");
+for (let i = 0; i < tableau; i++) {
+    document.write("<li>" + PremierTrimestre[i].prenom + ' ' + PremierTrimestre[i].nom + "</li>");
     // console.log(PremierTrimestre[i].prenom+' '+PremierTrimestre[i].nom);
 
-   //affiche les matières et notes:
-   document.write("<ul>");
+    //affiche les matières et notes:
+    document.write("<ul>");
     for (let matiere in PremierTrimestre[i].moyenne) {
         // document.write("<li>");
-        document.write("<li>"+matiere+' '+PremierTrimestre[i].moyenne[matiere] +"</li>");
+        document.write("<li style=list-style:square>" + matiere + ' ' + PremierTrimestre[i].moyenne[matiere] + "</li>");
         // on conte les tours => ??????
         rowCount++;
         // on addition les notes :
         sommes += PremierTrimestre[i].moyenne[matiere];
     }
     // on effectue l'opération pour optenir la moyenne générale :
-    document.write("<li style=list-style:none><strong> Moyenne général : "+ ' '+(sommes / rowCount).toFixed(2) +"<strong></li>");
-    document.write("</ul>");
+    document.write("<li style=list-style:none><strong> Moyenne général : " + ' ' + (sommes / rowCount).toFixed(2) + "<strong></li>");
+    document.write("</ul><br>");
 }
 document.write("</ol>");
 

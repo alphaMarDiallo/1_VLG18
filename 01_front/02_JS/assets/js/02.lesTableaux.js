@@ -1,4 +1,4 @@
-// -- Déclaree un tableau indexe 
+// -- Déclaree un tableau indexé 
 
 var monTableau = [];
 var myArray = new Array;
@@ -18,16 +18,16 @@ var nosPrenom = [
     "Alpha",
     "Kevin"
 ];
-console.log(nosPrenom);
+console.log(nosPrenom); //affiche tout les éléments de mon tableau
 
 var coordonnee = {
     prenom: "Hugo",
     nom: "LIEGEARD",
     age: 28
 };
-console.log(coordonnee);
-console.log(coordonnee['prenom']);
-console.log(coordonnee.nom);
+console.log(coordonnee); //affiche tout les éléments de mon tableau
+console.log(coordonnee['prenom']); //affiche uniquement le prénom
+console.log(coordonnee.nom); //affiche uniquement le nom
 
 var annuaireDesApprenants = [
     ["Hugo", "LIEGEARD", "XXXX XX XX XX"],
@@ -43,12 +43,13 @@ var annuaireDesApprenants = [
         tel: "XXXX XX XX XX"
     }
 ];
-console.log(annuaireDesApprenants);
-console.log(annuaireDesApprenants[0][2]);
-console.log(annuaireDesApprenants[1][1]);
+console.log(annuaireDesApprenants); //affiche tout les éléments de mon tableau
+console.log(annuaireDesApprenants[0][2]); //affiche UNIQUEMENT le telephone du premier élément de mon tableau
+console.log(annuaireDesApprenants[1][1]); //affiche UNIQUEMENT le nom du deuxième élément de mon tableau
 // -- Ce n'est pas pratique
-console.log(annuaireDesApprenants[3].prenom);
+console.log(annuaireDesApprenants[3].prenom); //affiche UNIQUEMENT le prénom du troisième élément de mon tableau
 
+//tableau multi-dimensionnel :
 var Contacts = [{
         prenom: "Hugo",
         nom: "LIEGEARD",
@@ -114,10 +115,10 @@ var Contacts = [{
     }
 ];
 
-console.log(Contacts);
-console.log(Contacts[0].coordonnees.email);
-console.log(Contacts[1].coordonnees.email);
-console.log(Contacts[2].coordonnees.email);
+console.log(Contacts); //affiche tout les objets de mon tableau
+console.log(Contacts[0].coordonnees.email); //affiche tout l'email du premier objet de mon tableau
+console.log(Contacts[1].coordonnees.email); //affiche tout l'email du deuxième objet de mon tableau
+console.log(Contacts[2].coordonnees.email); //affiche tout l'email du troisième objet de mon tableau
 
 /*-------------------------------- 
             CONSIGNES
@@ -193,6 +194,7 @@ var receipes = [{
         }
     ]
 }, ];
+console.log(receipes);
 
 /*-------------------------------- 
         AJOUTER UN ELEMENT 
@@ -200,7 +202,7 @@ var receipes = [{
 
 var Couleur = ["Rouge", "Jaune", "Vert"];
 
-// console.clear();/*La fonction clear() nettoie les info contenu dans la console */
+// console.clear(); /*La fonction clear() nettoie les info contenu dans la console */
 console.log(Couleur);
 // -- La fonction push me permet d'ajouter un élément à la fin de mon tableau.
 Couleur.push("Orange");

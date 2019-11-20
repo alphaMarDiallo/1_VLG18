@@ -37,25 +37,44 @@ function checkedBdd(emailUser, mdpUser){
     document.write("<h2 style=color:red> Identifiant ou mot de passe incorrecte </h2>");
  } */
 
- /*********************************** CORRECTION **********************************/
- // -- 1. Demander à l'utilisateur ses identifiants.
+/*********************************** CORRECTION **********************************/
+var BaseDeDonnees = [{
+        'prenom': 'Hugo',
+        'nom': 'LIEGEARD',
+        'email': 'wf3@hl-media.fr',
+        'mdp': 'wf3'
+    },
+    {
+        'prenom': 'Rodrigue',
+        'nom': 'NOUEL',
+        'email': 'rodrigue@hl-media.fr',
+        'mdp': 'wf3'
+    },
+    {
+        'prenom': 'Nathanael',
+        'nom': 'DORDONNE',
+        'email': 'nathanael.d@hl-media.fr',
+        'mdp': 'wf3'
+    }
+];
+// -- 1. Demander à l'utilisateur ses identifiants.
 var emailUser = prompt("Email", "<Saisissez votre Email>");
-var mdpUser   = prompt("Mot de passe ?", "<Saisissez votre Mot de Passe>");
+var mdpUser = prompt("Mot de passe ?", "<Saisissez votre Mot de Passe>");
 
 /**
  * Vérifie et Identifie un Utilisateur dans le tableau BaseDeDonnes.
  * Retourne l'utilisateur s'il à été trouvé.
  */
-function connexion( emailUser, mdpUser ) {
+function connexion(emailUser, mdpUser) {
 
     let isUserInArray = false;
 
     // -- 2. On parcours le tableau d'utilisateurs
-    for( let i = 0 ; i < BaseDeDonnees.length ; i++ ) {
+    for (let i = 0; i < BaseDeDonnees.length; i++) {
 
         console.log(BaseDeDonnees[i]);
         // -- 3. Si on trouve une correspondace entre l'email / mdp saisie par l'utilisateur et la BDD.
-        if ( emailUser === BaseDeDonnees[i].email && mdpUser === BaseDeDonnees[i].mdp ) {
+        if (emailUser === BaseDeDonnees[i].email && mdpUser === BaseDeDonnees[i].mdp) {
 
             // -- 4. L'utilisateur existe dans mon tableau
             isUserInArray = true;
@@ -87,7 +106,7 @@ var monUtilisateur = connexion(emailUser, mdpUser);
 l(monUtilisateur);
 
 // -- Si la condition retourne faux. ( Je n'ai pas trouvé de correspondance en BDD )
-if(monUtilisateur === undefined) {
+if (monUtilisateur === undefined) {
 
     alert("ATTENTION, Identifiants incorrects");
 
@@ -95,10 +114,8 @@ if(monUtilisateur === undefined) {
 
     // -- Tout va bien
     document.write("Bonjour " + monUtilisateur.prenom + " " + monUtilisateur.nom + " !");
-    
+
 }
 
-   
+
 /************************************************************************************/
-
-

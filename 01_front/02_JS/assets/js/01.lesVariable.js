@@ -6,7 +6,7 @@
     sur 
     plusieur lignes
 
-    shiht+alt+a
+    shift+alt+a
 */
 
 // -- 1 : Déclarer une variable JS
